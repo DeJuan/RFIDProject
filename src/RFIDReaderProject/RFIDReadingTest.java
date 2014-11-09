@@ -8,8 +8,9 @@ public class RFIDReadingTest {
 	Reader reader; 
 	public RFIDReadingTest(String protocol) throws ReaderException{
 		if (protocol == "auto"){
-			this.reader = Reader.create("tmr:///com4");
+			this.reader = Reader.create("tmr:///com3");
 			this.reader.connect();
+			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
 		}
 		else{
 			this.reader = Reader.create(protocol);
@@ -18,7 +19,7 @@ public class RFIDReadingTest {
 	}
 	
 	public TagReadData[] readTags() throws ReaderException{
-		TagReadData[] readTags = reader.read(100);
+		TagReadData[] readTags = reader.read(5000);
 		return readTags;
 	}
 	
