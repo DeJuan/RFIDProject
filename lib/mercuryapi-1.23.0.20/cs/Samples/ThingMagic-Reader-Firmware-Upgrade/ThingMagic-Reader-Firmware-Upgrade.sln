@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThingMagic-Reader-Firmware-Upgrade", "ThingMagic-Reader-Firmware-Upgrade\ThingMagic-Reader-Firmware-Upgrade.csproj", "{DAB22738-8E4F-40BD-8EF0-38ECE14C706D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAB22738-8E4F-40BD-8EF0-38ECE14C706D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB22738-8E4F-40BD-8EF0-38ECE14C706D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB22738-8E4F-40BD-8EF0-38ECE14C706D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB22738-8E4F-40BD-8EF0-38ECE14C706D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

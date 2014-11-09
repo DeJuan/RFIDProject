@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+ <!-- FTDI FT232R UART -->
+    <usb-device
+        product-id="24577"
+        vendor-id="1027" />
+		
+ <!-- CDC -->		
+	<usb-device
+        product-id="4098"
+        vendor-id="8200" />	
+
+</resources>

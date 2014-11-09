@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?define ProductVersion="!(bind.packageVersion.URA2)" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+  <Bundle Name="Universal Reader Assistant" Version="$(var.ProductVersion)" Manufacturer="ThingMagic" AboutUrl="http://www.thingmagic.com/" IconSourceFile="thing-magic-icon.ico"
+          Copyright="© 2000-2012 ThingMagic, A Division of Trimble" UpgradeCode="83866c85-5694-4fa7-89ab-ccaaf2a68593">
+    
+    <bal:Condition Message='You are attempting to run the 64-bit installer on a 32-bit version of Windows. Please check the bit version of Windows type prior to installation of this product.'>
+      VersionNT64
+    </bal:Condition>
+
+    <bal:Condition Message= "You need to be an administrator to install this product.">
+      Privileged
+    </bal:Condition>
+    
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" >
+      <bal:WixStandardBootstrapperApplication 
+      ThemeFile="UraTheme.xml"
+      LicenseFile="EULA.rtf"
+      LogoFile="ThingMagic_logo.png" />
+    </BootstrapperApplicationRef>
+
+    <Chain DisableRollback="no">
+      <PackageGroupRef Id="URAFull"/>      
+      <MsiPackage
+          Compressed="yes" 
+          SourceFile="$(var.SolutionDir)URA2Installer\bin\Release\URA2Installer.msi"
+          Vital="yes">
+        <MsiProperty
+            Name="ARPSYSTEMCOMPONENT"
+            Value="1"/>
+      </MsiPackage>
+    </Chain>
+        <!--<Chain>
+            <MsiPackage Id="BonjourService64" EnableFeatureSelection="yes" DisplayInternalUI="yes"
+                Compressed="yes" Visible="yes" 
+                SourceFile="$(var.SolutionDir)URABonjuorSetup\Bonjour64.msi" 
+                Vital="yes">
+              <MsiProperty  Name="ARPSYSTEMCOMPONENT"   Value="1"/>              
+            </MsiPackage>          
+          <MsiPackage  Id="URA"  EnableFeatureSelection="yes" DisplayInternalUI="yes"
+              Compressed="yes" Visible="yes"
+              SourceFile="$(var.SolutionDir)URA2Installer\bin\Release\URA2Installer.msi"
+              Vital="yes">
+            <MsiProperty  Name="ARPSYSTEMCOMPONENT"  Value="1"/>
+          </MsiPackage>
+      </Chain>-->
+  </Bundle>
+  
+    <Fragment>
+      <!--<UIRef Id="WixUI_Mondo" />
+      <UIRef Id="WixUI_ErrorProgressText" />-->     
+
+    <WixVariable Id="WixMbaPrereqPackageId" Value="URAFull" />
+    <PackageGroup Id="URAFull">      
+        <MsiPackage  Id="URA2"  EnableFeatureSelection="yes" 
+            Compressed="yes" Visible="yes" 
+            SourceFile="$(var.SolutionDir)URA2Installer\bin\Release\URA2Installer.msi"
+            Vital="yes">
+          <MsiProperty  Name="ARPSYSTEMCOMPONENT"  Value="1"/>
+        </MsiPackage>
+      <MsiPackage Id="BonjourService64" EnableFeatureSelection="yes" DisplayInternalUI="yes" 
+          Compressed="yes" Visible="yes"
+          SourceFile="$(var.SolutionDir)URABonjourSetup64\Bonjour64.msi"
+          Vital="no">
+        <MsiProperty  Name="ARPSYSTEMCOMPONENT"   Value="1"/>
+      </MsiPackage>
+    </PackageGroup>
+    </Fragment>
+</Wix>

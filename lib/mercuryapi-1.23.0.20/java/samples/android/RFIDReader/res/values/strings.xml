@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"> RFIDReader</string>
+    <string name="menu_settings">Settings</string>
+    <string name="Connect">Connect</string>
+    <string name="SerialReader">SerialReader</string>
+    <string name="NetworkReader">NetworkReader</string>
+    <string name="Read">Read</string>
+    <string name="SyncRead">SyncRead</string>
+    <string name="AsyncRead">AsyncRead</string>
+    <string name="Clear">Clear</string>
+    <string name="Search_Result">Search Result</string>
+    <string name="ValidationField">ValidationField</string>
+    <string name="SerialList">Choose a connection</string>
+
+    <!-- Table Header -->
+    <string name="SNO">#</string>
+    <string name="EPC">EPC</string>
+    <string name="COUNT">COUNT</string>
+    <string name="DATA">DATA</string>
+
+    <!-- Settings View -->
+    <string name="Settings">Settings</string>
+
+    <!-- Read Options View -->
+
+    <string name="ReadTime">Read Timeout (ms) :</string>
+    <string name="DefaultTime">1000</string>
+    <string name="Enable">Enable</string>
+    <string name="MemBank">MemBank</string>
+
+    <string-array name="MemBank_array">
+        <item>TID</item>
+        <item>Reserved</item>
+        <item>EPC</item>
+        <item>User</item>
+    </string-array>
+
+    <string name="Start">Start </string>
+    <string name="Lenght">Length </string>
+
+    <!-- Performance metrics -->
+    <string name="unique_tag_count">Unique Tag Count</string>
+    <string name="total_tag_count">Total Tag Count</string>
+    <string name="time_taken">Time Taken</string>
+    <string name="zero">0</string>
+
+    <!-- Alert Diolog -->
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
+</resources>

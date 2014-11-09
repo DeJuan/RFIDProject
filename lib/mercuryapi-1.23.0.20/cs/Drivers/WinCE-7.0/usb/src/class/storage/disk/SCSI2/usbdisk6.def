@@ -1,0 +1,16 @@
+LIBRARY         USBDISK6
+EXPORTS
+                UsbDiskAttach
+                UsbDiskDetach
+                DSK_Init
+                DSK_Deinit
+                DSK_Open
+                DSK_Close
+                DSK_Read
+                DSK_Write
+                DSK_Seek
+                DSK_IOControl
+                DSK_PowerUp
+                DSK_PowerDown
+                DSK_PreDeinit
+

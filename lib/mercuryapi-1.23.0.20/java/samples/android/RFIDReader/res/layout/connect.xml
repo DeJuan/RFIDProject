@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dip"
+    android:orientation="horizontal" 
+    android:background="@drawable/table_style">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.40"
+        android:gravity="center"
+        android:text="@string/ReadTime" />
+
+    <EditText
+        android:id="@+id/read_time_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.60"
+        android:gravity="left"
+        android:inputType="time"
+        android:maxLength="5"
+        android:text="@string/DefaultTime" />
+
+</LinearLayout>

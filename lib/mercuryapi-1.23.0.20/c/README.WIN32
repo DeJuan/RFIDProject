@@ -1,0 +1,73 @@
+Date: 2011/03/18
+
+INFO: 
+=====
+
+Adding Continuous reading feature to MercuryAPI on windows platform.
+
+Description: 
+============
+
+As mentioned in README.PORTING, The MercuryAPI is designed to be ported 
+and run on wide variety of runtime environments. Due to varying capabilities 
+of the hosts, The API has specific hooks in place for the services it needs.
+
+The file "tm_config.h" in the sources contains #define statements that 
+enable particular features of the C API. 
+
+  TMR_ENABLE_BACKGROUND_READS
+
+Defining this symbol enables the continuous reading (Asynchronous Read) feature 
+in the C API. And TMR_startReading() and TMR_stopReading() functions 
+can be used to obtain this functionality.  To know more about this feature, 
+Please refer to the MercuryAPI document.
+
+Earlier this feature was limited to POSIX platforms, as it require a POSIX 
+threads interface to compile and run. 
+
+Now, with the introduction of 'pthreads-win32' (Open-source POSIX threads 
+for WIN32), This feature is also made available to windows platforms.
+
+
+NOTE: pthreads-win32 is free-software, and is distributed under the
+GNU Lesser General Public License (LGPL).
+
+ThingMagic's MercuryAPI uses pthreads-win32 pre-built libraries for WIN32
+without any modification. These libraries along with the copy of license
+are placed under the directory "src\arch\win32\lib" and the corresponding
+header files are placed under "src\arch\win32\include".
+
+======================
+Using Pthreads-WIN32:
+======================
+
+To know more information about "pthreads-win32", visit
+http://sourceware.org/pthreads-win32/
+
+"pthreads-win32" pre-built libraries are available for download at:
+ftp://sourceware.org/pub/pthreads-win32/dll-latest
+
+MercuryAPI windows project already has the references linked to pthreads
+object file library "pthreadVC2.lib" located in "src\arch\win32\lib".
+
+
+============================
+Running Sample Applications:
+============================
+In order to run sample applications, they require "pthreadVC2.dll" runtime
+library. This DLL is can be found in "src\arch\win32\lib". It can also
+be found in the downloaded pre-built image.
+
+Copy this DLL to a location where the host windows can find this at run time.
+The ideal place would be "%SystemRoot%\system32" (C:\WINDOWS\system32).
+
+Now, its all set to run the sample applications.
+
+
+=============================
+ReadAsync and ReadAsyncTrack
+=============================
+
+These sample codelets demonstrates the functionality of continuous reading and also
+usage of read listeners for handling the tag read responses/streams.
+

@@ -1,0 +1,38 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="header_title_background">
+        <item name="android:src">@drawable/title_background_img</item>
+        
+    </style>
+    
+    <style name="main_title_text_img">
+        <item name="android:src">@drawable/thingmagic_logo_trans</item>
+    </style>
+    <style name="reader_search_img">
+        <item name="android:src">@drawable/reader_search</item>
+    </style>
+    
+    <style name="titleBarText">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

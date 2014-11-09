@@ -1,0 +1,368 @@
+"DeployProject"
+{
+"VSVersion" = "3:701"
+"ProjectType" = "8:{AB322303-2255-48EF-A496-5904EB18DA55}"
+"IsWebType" = "8:FALSE"
+"ProjectName" = "8:FtdiVcpInstaller"
+"LanguageId" = "3:1033"
+"CodePage" = "3:1252"
+"SccProjectName" = "8:"
+"SccLocalPath" = "8:"
+"SccAuxPath" = "8:"
+"SccProvider" = "8:"
+    "Hierarchy"
+    {
+        "Entry"
+        {
+        "MsmKey" = "8:_4AEB64E0A32A428AB81EBCAEF3D1E87F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_839DE14B8DAF49FFBD1C7A7CA460351B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+    }
+    "Configurations"
+    {
+        "Debug"
+        {
+        "DisplayName" = "8:Debug"
+        "IsDebugOnly" = "11:TRUE"
+        "IsReleaseOnly" = "11:FALSE"
+        "OutputFilename" = "8:Debug\\FtdiVcpInstaller.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:FALSE"
+        "CertificateHash" = "8:"
+        "TimeStampServer" = "8:"
+        }
+        "Release"
+        {
+        "DisplayName" = "8:Release"
+        "IsDebugOnly" = "11:FALSE"
+        "IsReleaseOnly" = "11:TRUE"
+        "OutputFilename" = "8:Release\\FtdiVcpInstaller.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:FALSE"
+        "CertificateHash" = "8:"
+        "TimeStampServer" = "8:"
+        }
+    }
+    "Deployable"
+    {
+        "File"
+        {
+            "{BA458234-9B71-4F46-8107-E91156377184}:_4AEB64E0A32A428AB81EBCAEF3D1E87F"
+            {
+            "SourcePath" = "8:FTDIPORT.INF"
+            "TargetName" = "8:FTDIPORT.INF"
+            "Tag" = "8:"
+            "Folder" = "8:_A5D40251275D467AB404F510D9F6E651"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_839DE14B8DAF49FFBD1C7A7CA460351B"
+            {
+            "SourcePath" = "8:ftdi_ser.dll"
+            "TargetName" = "8:ftdi_ser.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A5D40251275D467AB404F510D9F6E651"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+        }
+        "Folder"
+        {
+            "{D5B00AC1-E6C3-4CC5-90FF-8E0F53D9E5E0}:_427D0CF04A84401495371C7791622AE3"
+            {
+            "DefaultLocation" = "8:%InstallDir%"
+            "Name" = "8:#1920"
+            "Condition" = "8:"
+            "Property" = "8:%InstallDir%"
+                "Folders"
+                {
+                }
+            }
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_A5D40251275D467AB404F510D9F6E651"
+            {
+            "Name" = "8:#1912"
+            "Condition" = "8:"
+            "Property" = "8:%CE2%"
+                "Folders"
+                {
+                }
+            }
+        }
+        "Product"
+        {
+        "Name" = "8:Microsoft Visual Studio"
+        "ProductName" = "8:FTDI VCP Driver"
+        "Manufacturer" = "8:ThingMagic"
+        "OSVersionMin" = "8:4.0"
+        "OSVersionMax" = "8:6.99"
+        "NoUninstall" = "11:FALSE"
+        "Compress" = "11:FALSE"
+        "CESetupDLL" = "8:"
+        }
+        "ProjectOutput"
+        {
+        }
+        "Registry"
+        {
+            "HKLM"
+            {
+                "Keys"
+                {
+                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_D26342FF44C9489288AB99FF2CCDFE35"
+                    {
+                    "Name" = "8:Drivers"
+                    "Condition" = "8:"
+                        "Keys"
+                        {
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_4FFB80CFCE93489D901424AF55C3831C"
+                            {
+                            "Name" = "8:USB"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_609866C6595D4202987A62CA56145AD7"
+                                    {
+                                    "Name" = "8:LoadClients"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_454F07DDEAFB4BC0B82DC9F79B5B703E"
+                                            {
+                                            "Name" = "8:1027_24577"
+                                            "Condition" = "8:"
+                                                "Keys"
+                                                {
+                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_D935A54654F54973A374221C1C6FACAB"
+                                                    {
+                                                    "Name" = "8:Default"
+                                                    "Condition" = "8:"
+                                                        "Keys"
+                                                        {
+                                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_3A7EB8B2FF9E40D4AC9AA7FDFEB71D80"
+                                                            {
+                                                            "Name" = "8:Default"
+                                                            "Condition" = "8:"
+                                                                "Keys"
+                                                                {
+                                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_F89D24F609C74785B84CDDE0DA8464D9"
+                                                                    {
+                                                                    "Name" = "8:FTDI_DEVICE"
+                                                                    "Condition" = "8:"
+                                                                        "Keys"
+                                                                        {
+                                                                        }
+                                                                        "Values"
+                                                                        {
+                                                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_2065E9A9CD2E491DBCF8AFD5646B4A8E"
+                                                                            {
+                                                                            "Name" = "8:DLL"
+                                                                            "Condition" = "8:"
+                                                                            "ValueTypes" = "3:1"
+                                                                            "Value" = "8:ftdi_ser.dll"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_A0B4B7917256451CBC43B7037B88A336"
+                                            {
+                                            "Name" = "8:Default"
+                                            "Condition" = "8:"
+                                                "Keys"
+                                                {
+                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_E2595C5A40EA48CBBDEF5BFFDE848060"
+                                                    {
+                                                    "Name" = "8:Default"
+                                                    "Condition" = "8:"
+                                                        "Keys"
+                                                        {
+                                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_391D84D4EE664B0B9E7038D57828F602"
+                                                            {
+                                                            "Name" = "8:255"
+                                                            "Condition" = "8:"
+                                                                "Keys"
+                                                                {
+                                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_526AAE3C7A42483DAC7140673E3D5BD8"
+                                                                    {
+                                                                    "Name" = "8:FTDI_DEVICE"
+                                                                    "Condition" = "8:"
+                                                                        "Keys"
+                                                                        {
+                                                                        }
+                                                                        "Values"
+                                                                        {
+                                                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_3DF3D63BFFE14E3F835AD3A3E4F443F6"
+                                                                            {
+                                                                            "Name" = "8:DLL"
+                                                                            "Condition" = "8:"
+                                                                            "ValueTypes" = "3:1"
+                                                                            "Value" = "8:ftdi_ser.dll"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_FE2FA23D37EA416F8A30589BFDAE734E"
+                                    {
+                                    "Name" = "8:ClientDrivers"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_87F172B9F90E4FF0B2F52B9A29769876"
+                                            {
+                                            "Name" = "8:FTDI_DEVICE"
+                                            "Condition" = "8:"
+                                                "Keys"
+                                                {
+                                                }
+                                                "Values"
+                                                {
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_0EE542197131499EB1A22E72E973C1D3"
+                                                    {
+                                                    "Name" = "8:Index"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:3"
+                                                    "Value" = "3:4"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_8116FC02D30D4128815D3CADF5EF9CDD"
+                                                    {
+                                                    "Name" = "8:Dll"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:ftdi_ser.dll"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_B25641C9C9F14D7FB0D1661CD2567FE0"
+                                                    {
+                                                    "Name" = "8:DeviceArrayIndex"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:3"
+                                                    "Value" = "3:0"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_BE05DB592AA8436F844283DA97D0B8C3"
+                                                    {
+                                                    "Name" = "8:InitialIndex"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:3"
+                                                    "Value" = "3:4"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_CCF57D4132CB4393BDF4E6A5F7CFD4E1"
+                                                    {
+                                                    "Name" = "8:Version"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:1.1.0.10"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_F5E3F8841CAE464D8592820FFDB31676"
+                                                    {
+                                                    "Name" = "8:Prefix"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:COM"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    }
+                }
+            }
+            "HKCU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKCR"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKPU"
+            {
+                "Keys"
+                {
+                }
+            }
+        }
+        "Shortcut"
+        {
+        }
+    }
+}

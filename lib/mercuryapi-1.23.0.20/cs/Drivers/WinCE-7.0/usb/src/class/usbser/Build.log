@@ -1,0 +1,211 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [00:0000000000:PROGC ] Build started with parameters: -c
+BUILD: [00:0000000001:PROGC ] Build started in directory: E:\WINCE700\public\common\oak\drivers\usb\class\usbser
+BUILD: [00:0000000002:PROGC ] Running passes WCEFILES0, MIDL, MC, ASN, THUNK, PRECOMPHEADER, COMPILE, LOCALIZE, RENUMBERICONIDS, RES2RES, LIB, EXPLIB, LINK, MANAGEDRESX, MANAGEDMOD, MANAGEDDLL, MANAGEDEXE, MANAGEDWIN, POSTBUILD for ARM.
+BUILD: [00:0000000003:PROGC ] Ignoring build database (-c specified).
+BUILD: [00:0000000004:PROGC ] Computing include file dependencies:
+BUILD: [01:0000000005:PROGC ] Scan E:\WINCE700\public\common\oak\drivers\usb\class\usbser\
+BUILD: [01:0000000007:PROGC ] ReadSourcesFiles for project E:\WINCE700\public\common\oak\drivers\usb\class\usbser\.
+BUILD: [00:0000000006:PROG  ] Waiting for 1 worker threads.
+BUILD: [00:0000000008:PROGC ] Directory scanning complete.
+BUILD: [00:0000000009:PROGC ] Saving E:\WINCE700\public\common\BuildARMV5retail.dat.
+BUILD: [00:0000000010:INFO  ] Done.
+BUILD: [00:0000000011:PROGC ] Saving Master Database complete.
+BUILD: [00:0000000012:PROGC ] Starting WCEFILES0 Pass.
+BUILD: [00:0000000013:PROGC ] Analyzing project dependency information for pass WCEFILES0.
+BUILD: [00:0000000014:PROGC ] Starting MIDL Pass.
+BUILD: [00:0000000015:PROGC ] Analyzing project dependency information for pass MIDL.
+BUILD: [00:0000000016:PROGC ] Starting MC Pass.
+BUILD: [00:0000000017:PROGC ] Analyzing project dependency information for pass MC.
+BUILD: [00:0000000018:PROGC ] Starting ASN Pass.
+BUILD: [00:0000000019:PROGC ] Analyzing project dependency information for pass ASN.
+BUILD: [00:0000000020:PROGC ] Starting THUNK Pass.
+BUILD: [00:0000000021:PROGC ] Analyzing project dependency information for pass THUNK.
+BUILD: [00:0000000022:PROGC ] Starting PRECOMPHEADER Pass.
+BUILD: [00:0000000023:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
+BUILD: [00:0000000024:PROGC ] Starting COMPILE Pass.
+BUILD: [00:0000000025:PROGC ] Analyzing project dependency information for pass COMPILE.
+BUILD: [00:0000000026:INFO  ] Will Build E:\WINCE700\public\common\oak\drivers\usb\class\usbser\usbser.cpp because target: obj\ARMV5\retail\usbser.obj is missing.
+BUILD: [00:0000000027:INFO  ] Will Build E:\WINCE700\public\common\oak\drivers\usb\class\usbser\userdev.cpp because target: obj\ARMV5\retail\userdev.obj is missing.
+BUILD: [00:0000000028:PROGC ] Building COMPILE Pass in E:\WINCE700\public\common\oak\drivers\usb\class\usbser\ directory.
+BUILD: [00:0000000029:PROG  ] 'NMAKE.EXE  clean TargetCompilePass  -nologo BUILDMSG=Stop.  BUILDROOT=E:\WINCE700\public\common CLEANBUILD=1 NOLINK=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000000030:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000000031:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\Sources.default
+BUILD: [01:0000000032:INFO  ] makefile.def: BUILDROOT is E:\WINCE700\public\common
+BUILD: [01:0000000033:INFO  ] makefile.def: Including E:\WINCE700\public\common\sources.cmn
+BUILD: [01:0000000034:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\drivers\usb\class\usbser\sources
+BUILD: [01:0000000035:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\Sources.framework.default
+BUILD: [01:0000000036:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\Sources.CE
+BUILD: [01:0000000037:INFO  ] Directory: E:\WINCE700\public\common\oak\drivers\usb\class\usbser
+BUILD: [01:0000000038:INFO  ] TARGETNAME: USBSER
+BUILD: [01:0000000039:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\sources.ReleaseType_OAK
+BUILD: [01:0000000040:INFO  ] Stop.
+BUILD: [01:0000000041:PROGC ] Compiling .\usbser.cpp .\userdev.cpp
+BUILD: [01:0000000042:INFO  ] cl -nologo   -Foobj\ARMV5\retail\  /Gy -c -I. -I..\CLIENTCMN -IE:\WINCE700\public\common\ddk\inc -IE:\WINCE700\public\common\oak\inc -IE:\WINCE700\public\common\oak\inc -IE:\WINCE700\public\common\sdk\inc -IE:\WINCE700\public\common\ddk\inc -IE:\WINCE700\public\common\sdk\inc\test -I.\Resource\0409 -Ox -Os -GF -Zi -Fdobj\ARMV5\retail\USBSER.pdb -DTHUMBSUPPORT -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -DUNICODE -D_UNICODE -DUNDER_CE=700 -D_WIN32_WCE=0x700 -DWINCEOEM -DWINCEINTERNAL -DWIN32 -DSTRICT -DARM -DARMV5 -D_ARM_ -D_MIDL_USE_GUIDDEF_ -DNDEBUG=1  -DUSE_NEW_SERIAL_MODEL -DINTERNATIONAL -DINTLMSG_CODEPAGE=1252 -FaE:\WINCE700\public\common\oak\drivers\usb\class\usbser\obj\ARMV5\retail\ -FAsc -WX -QRarch5 -QRinterwork-return -Zi  -Zc:wchar_t- -Zc:forScope- -wd4867 -wd4430 -wd4603 -wd4627 -wd4100 -wd4201 -wd4115 -wd4214 -wd4049 -wd4505 -MT -U_MT /FC -W3     /GR- .\usbser.cpp .\userdev.cpp 
+BUILD: [01:0000000043:INFO  ] usbser.cpp
+BUILD: [01:0000000044:INFO  ] userdev.cpp
+BUILD: [01:0000000045:INFO  ] Generating Code...
+BUILD: [00:0000000046:PROGC ] Starting LOCALIZE Pass.
+BUILD: [00:0000000047:PROGC ] Analyzing project dependency information for pass LOCALIZE.
+BUILD: [00:0000000048:PROGC ] Starting RENUMBERICONIDS Pass.
+BUILD: [00:0000000049:PROGC ] Analyzing project dependency information for pass RENUMBERICONIDS.
+BUILD: [00:0000000050:PROGC ] Starting RES2RES Pass.
+BUILD: [00:0000000051:PROGC ] Analyzing project dependency information for pass RES2RES.
+BUILD: [00:0000000052:PROGC ] Starting LIB Pass.
+BUILD: [00:0000000053:PROGC ] Analyzing project dependency information for pass LIB.
+BUILD: [00:0000000054:PROGC ] Starting EXPLIB Pass.
+BUILD: [00:0000000055:PROGC ] Analyzing project dependency information for pass EXPLIB.
+BUILD: [00:0000000056:INFO  ] Will Build E:\WINCE700\public\common\oak\lib\ARMV5\retail\USBCLIB.lib because target: E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.lib is missing.
+BUILD: [00:0000000057:INFO  ] Will Build E:\WINCE700\public\common\oak\lib\ARMV5\retail\com_mdd2.lib because target: E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.lib is missing.
+BUILD: [00:0000000058:INFO  ] Will Build E:\WINCE700\public\common\oak\lib\ARMV5\retail\serpddcm.lib because target: E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.lib is missing.
+BUILD: [00:0000000059:INFO  ] Will Build E:\WINCE700\public\common\oak\drivers\usb\class\usbser\obj\ARMV5\retail\usbser.obj because target: E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.lib is missing.
+BUILD: [00:0000000060:INFO  ] Will Build E:\WINCE700\public\common\oak\drivers\usb\class\usbser\obj\ARMV5\retail\userdev.obj because target: E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.lib is missing.
+BUILD: [00:0000000061:INFO  ] Will Build E:\WINCE700\public\common\oak\drivers\usb\class\usbser\ because target: E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.lib is missing.
+BUILD: [00:0000000062:PROGC ] Building EXPLIB Pass in E:\WINCE700\public\common\oak\drivers\usb\class\usbser\ directory.
+BUILD: [00:0000000063:PROG  ] 'NMAKE.EXE TargetExpLibFiles  -nologo BUILDMSG=Stop.  BUILDROOT=E:\WINCE700\public\common CLEANBUILD=1 LINKONLY=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000000064:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000000065:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\Sources.default
+BUILD: [01:0000000066:INFO  ] makefile.def: BUILDROOT is E:\WINCE700\public\common
+BUILD: [01:0000000067:INFO  ] makefile.def: Including E:\WINCE700\public\common\sources.cmn
+BUILD: [01:0000000068:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\drivers\usb\class\usbser\sources
+BUILD: [01:0000000069:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\Sources.framework.default
+BUILD: [01:0000000070:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\Sources.CE
+BUILD: [01:0000000071:INFO  ] Directory: E:\WINCE700\public\common\oak\drivers\usb\class\usbser
+BUILD: [01:0000000072:INFO  ] TARGETNAME: USBSER
+BUILD: [01:0000000073:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\sources.ReleaseType_OAK
+BUILD: [01:0000000074:INFO  ] .
+BUILD: [01:0000000075:PROGC ] Linking E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.lib
+BUILD: [01:0000000076:INFO  ] 	ExpandPaths.bat link -lib  -out:C:\Users\qvantel\AppData\Local\Temp\bld_78522\thr_14\USBSER.lib -def:USBSER.def -machine:thumb @C:\Users\qvantel\AppData\Local\Temp\bld_78522\thr_14\nmE082.tmp
+BUILD: [01:0000000077:INFO  ] ExpandPaths.bat: Info: Expanded "C:\Users\qvantel\AppData\Local\Temp\bld_78522\thr_14\nmE082.tmp"
+BUILD: [01:0000000078:INFO  ] -nodefaultlib 
+BUILD: [01:0000000079:INFO  ] -ignore:4001 
+BUILD: [01:0000000080:INFO  ] "/subsystem:windowsce,7.00" 
+BUILD: [01:0000000081:INFO  ] "E:\WINCE700\public\common\oak\drivers\usb\class\usbser\obj\ARMV5\retail\usbser.obj" 
+BUILD: [01:0000000082:INFO  ] "E:\WINCE700\public\common\oak\drivers\usb\class\usbser\obj\ARMV5\retail\userdev.obj" 
+BUILD: [01:0000000083:INFO  ] "E:\WINCE700\public\common\oak\lib\armv5\retail\USBCLIB.lib" 
+BUILD: [01:0000000084:INFO  ] "E:\WINCE700\public\common\oak\lib\armv5\retail\com_mdd2.lib" 
+BUILD: [01:0000000085:INFO  ] "E:\WINCE700\public\common\oak\lib\armv5\retail\serpddcm.lib" 
+BUILD: [01:0000000086:INFO  ] Microsoft (R) Library Manager Version 9.00.30729.4998
+BUILD: [01:0000000087:INFO  ] Copyright (C) Microsoft Corporation.  All rights reserved.
+BUILD: [01:0000000088:INFO  ] 
+BUILD: [01:0000000089:INFO  ] -nodefaultlib 
+BUILD: [01:0000000090:INFO  ] -ignore:4001 
+BUILD: [01:0000000091:INFO  ] "/subsystem:windowsce,7.00" 
+BUILD: [01:0000000092:INFO  ] "E:\WINCE700\public\common\oak\drivers\usb\class\usbser\obj\ARMV5\retail\usbser.obj" 
+BUILD: [01:0000000093:INFO  ] "E:\WINCE700\public\common\oak\drivers\usb\class\usbser\obj\ARMV5\retail\userdev.obj" 
+BUILD: [01:0000000094:INFO  ] "E:\WINCE700\public\common\oak\lib\armv5\retail\USBCLIB.lib" 
+BUILD: [01:0000000095:INFO  ] "E:\WINCE700\public\common\oak\lib\armv5\retail\com_mdd2.lib" 
+BUILD: [01:0000000096:INFO  ] "E:\WINCE700\public\common\oak\lib\armv5\retail\serpddcm.lib" 
+BUILD: [01:0000000097:INFO  ]    Creating library C:\Users\qvantel\AppData\Local\Temp\bld_78522\thr_14\USBSER.lib and object C:\Users\qvantel\AppData\Local\Temp\bld_78522\thr_14\USBSER.exp
+BUILD: [01:0000000098:INFO  ] 	CopyIfDifferent.bat C:\Users\qvantel\AppData\Local\Temp\bld_78522\thr_14\USBSER.lib E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.lib
+BUILD: [01:0000000099:INFO  ] 
+BUILD: [01:0000000100:INFO  ] File not found: "E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.lib".
+BUILD: [01:0000000101:INFO  ]         1 file(s) copied.
+BUILD: [01:0000000102:INFO  ] 	copy C:\Users\qvantel\AppData\Local\Temp\bld_78522\thr_14\USBSER.exp E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.exp
+BUILD: [01:0000000103:INFO  ]         1 file(s) copied.
+BUILD: [00:0000000104:PROGC ] Starting LINK Pass.
+BUILD: [00:0000000105:PROGC ] Analyzing project dependency information for pass LINK.
+BUILD: [00:0000000106:INFO  ] Will Build E:\WINCE700\public\common\oak\lib\ARMV5\retail\USBCLIB.lib because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000107:INFO  ] Will Build E:\WINCE700\public\common\oak\lib\ARMV5\retail\com_mdd2.lib because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000108:INFO  ] Will Build E:\WINCE700\public\common\oak\lib\ARMV5\retail\serpddcm.lib because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000109:INFO  ] Will Build E:\WINCE700\public\common\oak\drivers\usb\class\usbser\usbser.def because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000110:INFO  ] Will Build E:\WINCE700\public\common\exp\lib\ARMV5\retail\ceddk.lib because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000111:INFO  ] Will Build E:\WINCE700\public\common\oak\lib\ARMV5\retail\usbd.lib because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000112:INFO  ] Will Build E:\WINCE700\public\common\exp\lib\ARMV5\retail\coredll.lib because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000113:INFO  ] Will Build E:\WINCE700\public\common\oak\lib\ARMV5\retail\corelib0.lib because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000114:INFO  ] Will Build E:\WINCE700\public\common\exp\lib\ARMV5\retail\corelib1.lib because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000115:INFO  ] Will Build E:\WINCE700\public\common\oak\drivers\usb\class\usbser\obj\ARMV5\retail\usbser.obj because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000116:INFO  ] Will Build E:\WINCE700\public\common\oak\drivers\usb\class\usbser\obj\ARMV5\retail\userdev.obj because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000117:INFO  ] Will Build E:\WINCE700\public\common\oak\drivers\usb\class\usbser\ because target: E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll is missing.
+BUILD: [00:0000000118:PROGC ] Building LINK Pass in E:\WINCE700\public\common\oak\drivers\usb\class\usbser\ directory.
+BUILD: [00:0000000119:PROG  ] 'NMAKE.EXE TargetExeFiles  -nologo BUILDMSG=Stop.  BUILDROOT=E:\WINCE700\public\common CLEANBUILD=1 LINKONLY=1 NOPASS0=1MAKEDLL=1' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000000120:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000000121:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\Sources.default
+BUILD: [01:0000000122:INFO  ] makefile.def: BUILDROOT is E:\WINCE700\public\common
+BUILD: [01:0000000123:INFO  ] makefile.def: Including E:\WINCE700\public\common\sources.cmn
+BUILD: [01:0000000124:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\drivers\usb\class\usbser\sources
+BUILD: [01:0000000125:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\Sources.framework.default
+BUILD: [01:0000000126:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\Sources.CE
+BUILD: [01:0000000127:INFO  ] Directory: E:\WINCE700\public\common\oak\drivers\usb\class\usbser
+BUILD: [01:0000000128:INFO  ] TARGETNAME: USBSER
+BUILD: [01:0000000129:INFO  ] makefile.def: Including E:\WINCE700\public\common\oak\misc\sources.ReleaseType_OAK
+BUILD: [01:0000000130:INFO  ] .
+BUILD: [01:0000000131:INFO  ] 	set LIB=
+BUILD: [01:0000000132:PROGC ] Linking E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll
+BUILD: [01:0000000133:INFO  ] 	link /LARGEADDRESSAWARE /filealign:0x1000 -out:E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll -dll -machine:thumb @C:\Users\qvantel\AppData\Local\Temp\bld_78522\thr_15\nmE9A6.tmp
+BUILD: [01:0000000134:INFO  ] Microsoft (R) Incremental Linker Version 9.00.30729.4998
+BUILD: [01:0000000135:INFO  ] Copyright (C) Microsoft Corporation.  All rights reserved.
+BUILD: [01:0000000136:INFO  ] 
+BUILD: [01:0000000137:INFO  ] -nodefaultlib 
+BUILD: [01:0000000138:INFO  ] -entry:_DllEntryCRTStartup 
+BUILD: [01:0000000139:INFO  ] -pdb:E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.pdb 
+BUILD: [01:0000000140:INFO  ] -pdbaltpath:USBSER.pdb 
+BUILD: [01:0000000141:INFO  ] /opt:ref 
+BUILD: [01:0000000142:INFO  ] -debug -incremental:no 
+BUILD: [01:0000000143:INFO  ] -map:E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.map 
+BUILD: [01:0000000144:INFO  ] -savebaserelocations:E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.rel 
+BUILD: [01:0000000145:INFO  ] -MERGE:.rdata=.text -merge:.astart=.text -ignore:4001,4070,4078,4086,4089,4096,4099,4108,4229 /STACK:65536,4096 -profile -incremental:no 
+BUILD: [01:0000000146:INFO  ] "/subsystem:windowsce,7.00" 
+BUILD: [01:0000000147:INFO  ] /base:0x10000000 
+BUILD: [01:0000000148:INFO  ] obj\ARMV5\retail\usbser.obj 
+BUILD: [01:0000000149:INFO  ] obj\ARMV5\retail\userdev.obj 
+BUILD: [01:0000000150:INFO  ] E:\WINCE700\public\common\oak\lib\ARMV5\retail\usbclib.lib 
+BUILD: [01:0000000151:INFO  ] E:\WINCE700\public\common\oak\lib\ARMV5\retail\com_mdd2.lib 
+BUILD: [01:0000000152:INFO  ] E:\WINCE700\public\common\oak\lib\ARMV5\retail\serpddcm.lib 
+BUILD: [01:0000000153:INFO  ] E:\WINCE700\public\common\exp\lib\ARMV5\retail\ceddk.lib 
+BUILD: [01:0000000154:INFO  ] E:\WINCE700\public\common\oak\lib\ARMV5\retail\usbd.lib 
+BUILD: [01:0000000155:INFO  ] E:\WINCE700\public\common\exp\lib\ARMV5\retail\coredll.lib 
+BUILD: [01:0000000156:INFO  ] E:\WINCE700\public\common\oak\lib\ARMV5\retail\corelib0.lib 
+BUILD: [01:0000000157:INFO  ] E:\WINCE700\public\common\exp\lib\ARMV5\retail\corelib1.lib 
+BUILD: [01:0000000158:INFO  ] E:\WINCE700\public\COMMON\oak\lib\ARMV5\retail\USBSER.exp 
+BUILD: [01:0000000159:INFO  ] 	copy E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.map E:\WINCE700\OSDesigns\Alioth_Sample_OSDesign\Alioth_Sample_OSDesign\RelDir\Alioth_ARMV5_Release\USBSER.map
+BUILD: [01:0000000160:INFO  ]         1 file(s) copied.
+BUILD: [01:0000000161:INFO  ] 	if exist E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.pdb copy E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.pdb E:\WINCE700\OSDesigns\Alioth_Sample_OSDesign\Alioth_Sample_OSDesign\RelDir\Alioth_ARMV5_Release
+BUILD: [01:0000000162:INFO  ]         1 file(s) copied.
+BUILD: [01:0000000163:INFO  ] 	if exist E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.rel copy E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.rel E:\WINCE700\OSDesigns\Alioth_Sample_OSDesign\Alioth_Sample_OSDesign\RelDir\Alioth_ARMV5_Release\USBSER.rel
+BUILD: [01:0000000164:INFO  ]         1 file(s) copied.
+BUILD: [01:0000000165:INFO  ] 	if exist E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.res copy E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.res E:\WINCE700\OSDesigns\Alioth_Sample_OSDesign\Alioth_Sample_OSDesign\RelDir\Alioth_ARMV5_Release\USBSER.res
+BUILD: [01:0000000166:INFO  ] 	copy E:\WINCE700\public\COMMON\oak\target\ARMV5\retail\USBSER.dll E:\WINCE700\OSDesigns\Alioth_Sample_OSDesign\Alioth_Sample_OSDesign\RelDir\Alioth_ARMV5_Release\USBSER.dll
+BUILD: [01:0000000167:INFO  ]         1 file(s) copied.
+BUILD: [00:0000000168:PROGC ] Starting MANAGEDRESX Pass.
+BUILD: [00:0000000169:PROGC ] Analyzing project dependency information for pass MANAGEDRESX.
+BUILD: [00:0000000170:PROGC ] Starting MANAGEDMOD Pass.
+BUILD: [00:0000000171:PROGC ] Analyzing project dependency information for pass MANAGEDMOD.
+BUILD: [00:0000000172:PROGC ] Starting MANAGEDDLL Pass.
+BUILD: [00:0000000173:PROGC ] Analyzing project dependency information for pass MANAGEDDLL.
+BUILD: [00:0000000174:PROGC ] Starting MANAGEDEXE Pass.
+BUILD: [00:0000000175:PROGC ] Analyzing project dependency information for pass MANAGEDEXE.
+BUILD: [00:0000000176:PROGC ] Starting MANAGEDWIN Pass.
+BUILD: [00:0000000177:PROGC ] Analyzing project dependency information for pass MANAGEDWIN.
+BUILD: [00:0000000178:PROGC ] Starting POSTBUILD Pass.
+BUILD: [00:0000000179:PROGC ] Analyzing project dependency information for pass POSTBUILD.
+BUILD: [00:0000000180:PROGC ] Saving E:\WINCE700\public\common\BuildARMV5retail.dat.
+BUILD: [00:0000000181:INFO  ] Done.
+BUILD: [00:0000000182:PROGC ] Done.
+BUILD: [00:0000000183:PROGC ]                        Files  Warnings  Errors
+BUILD: [00:0000000184:PROGC ] Midl                       0         0       0
+BUILD: [00:0000000185:PROGC ] Message                    0         0       0
+BUILD: [00:0000000186:PROGC ] Precomp Header             0         0       0
+BUILD: [00:0000000187:PROGC ] Resource                   0         0       0
+BUILD: [00:0000000188:PROGC ] XRPack                     0         0       0
+BUILD: [00:0000000189:PROGC ] MASM                       0         0       0
+BUILD: [00:0000000190:PROGC ] SHASM                      0         0       0
+BUILD: [00:0000000191:PROGC ] ARMASM                     0         0       0
+BUILD: [00:0000000192:PROGC ] MIPSASM                    0         0       0
+BUILD: [00:0000000193:PROGC ] C++                        1         0       0
+BUILD: [00:0000000194:PROGC ] C                          0         0       0
+BUILD: [00:0000000195:PROGC ] CheckLibs                  0         0       0
+BUILD: [00:0000000196:PROGC ] Static Libraries           0         0       0
+BUILD: [00:0000000197:PROGC ] Exe's                      0         0       0
+BUILD: [00:0000000198:PROGC ] Dll's                      2         0       0
+BUILD: [00:0000000199:PROGC ] Preprocess deffile         0         0       0
+BUILD: [00:0000000200:PROGC ] Resx                       0         0       0
+BUILD: [00:0000000201:PROGC ] CSharp Compile             0         0       0
+BUILD: [00:0000000202:PROGC ] VCProj Compile             0         0       0
+BUILD: [00:0000000203:PROGC ] Other                      0         0       0
+BUILD: [00:0000000204:PROGC ] 
+BUILD: [00:0000000205:PROGC ] Total                      3         0       0
+BUILD: [00:0000000206:PROGC ] 
+BUILD: [00:0000000207:PROGC ] 0 Warnings,  0 Errors
+BUILD: [00:0000000208:PROGC ] GetSystemTimes (seconds): Idle: 30    Kernel: 34    User: 6    
+BUILD: [00:0000000209:PROGC ] Elapsed  time  (seconds): 20   

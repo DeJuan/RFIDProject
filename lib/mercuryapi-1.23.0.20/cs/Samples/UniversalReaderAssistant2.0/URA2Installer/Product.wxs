@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?define ApplicationName="UniversalReaderAssistant2.5" ?>
+<?define ProductVersion="!(bind.FileVersion.URA2)" ?>
+<?define UpgradeCode="6569307f-e5f4-4acd-adfe-268926597e02" ?>
+<?define PackageCode="{????????-????-????-????-????????????}"?>
+<?define RTMProductVersion="1.0.0" ?>
+<?define Manufacturer="ThingMagic"?>
+<!--
+  The name of application exe file. This will be used to kill the process when updating
+  and creating the desktop shortcut
+  -->
+<?define ExeProcessName="UniversalReaderAssistant.exe" ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+      xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+	<Product Id="*"
+           Name="$(var.ApplicationName)"
+           Language="1033"
+           Codepage="1252"          
+           Version="$(var.ProductVersion)"
+           Manufacturer="$(var.Manufacturer)"
+           UpgradeCode="$(var.UpgradeCode)">
+
+    <Package Id="$(var.PackageCode)"
+             Description="PackageDescription"
+             Comments="Comments"
+             Manufacturer="$(var.Manufacturer)"
+             InstallerVersion="200"
+             Languages="1033"
+             SummaryCodepage="1252"
+             InstallScope="perMachine"
+             InstallPrivileges="elevated"             
+             Compressed="yes"
+             AdminImage="no"
+             Keywords="Installer,MSI,Database" />
+
+    <!--Allow users to choose installation location-->
+    <Property Id="WIXUI_INSTALLDIR" Value="APPLICATIONROOTDIRECTORY"/>
+    <UIRef Id="WixUI_InstallDir" />
+
+    <!-- 493 by 58 pixels, this image will appear at the top of all but the first page of the installer.-->
+    <WixVariable Id="WixUIBannerBmp" Value="Banner1.jpg" />
+    
+    <!--493 by 312 pixels, this bitmap will appear on the first page of the installer.-->
+    <WixVariable Id="WixUIDialogBmp" Value="Banner2.jpg" />
+    
+    <!--Installer privileges-->
+    <Condition Message= "You need to be an administrator to install this product.">
+      Privileged
+    </Condition>
+		
+    <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+    
+    <!--The Upgrade table contains information required during major upgrades.-->
+    <Upgrade Id="$(var.UpgradeCode)">
+      <!-- Detect any newer version of this product -->
+      <UpgradeVersion Minimum="$(var.ProductVersion)"
+                      IncludeMinimum="no"
+                      OnlyDetect="yes"
+                      Language="1033"
+                      Property="NEWPRODUCTFOUND" />
+      <!-- Detect and remove any older version of this product -->
+      <UpgradeVersion Minimum="$(var.RTMProductVersion)"
+                      IncludeMinimum="yes"
+                      Maximum="$(var.ProductVersion)"
+                      IncludeMaximum="no"
+                      OnlyDetect="no"
+                      Language="1033"
+                      Property="UPGRADEFOUND" />
+    </Upgrade>
+
+    <!-- Prevent downgrading -->
+    <CustomAction Id="PREVENTDOWNGRADE" Error="Newer version already installed"/>
+
+    <!--Schedule custom action in InstallExecuteSequence tables and RemoveExistingProducts 
+        action in InstallExecuteSequence table-->
+    <InstallExecuteSequence>
+
+      <Custom Action="PREVENTDOWNGRADE" After="FindRelatedProducts">NEWPRODUCTFOUND</Custom>
+      
+      <!-- The InstallValidate option removes all the files regardless then installs the 
+      newer versions. The InstallFinalize only removes those files that have changed 
+      between the two -->
+      <RemoveExistingProducts After="InstallValidate" />
+
+    </InstallExecuteSequence>
+
+    <!-- This will close the URA app if it's running while upgrading/uninstalling -->
+    <util:CloseApplication Id="CloseSuperForm" CloseMessage="yes" Description="Close the application before installing or uninstalling"
+                           ElevatedCloseMessage="no" RebootPrompt="no" Target="$(var.ExeProcessName)" />
+    
+    <!--Detect .net framework 4.0-->
+    <PropertyRef Id="NETFRAMEWORK40CLIENT"/>
+    <Condition Message="This application requires .NET Framework 4.0 Client Profile. Please install the .NET Framework then run this installer again.">
+      <![CDATA[Installed OR NETFRAMEWORK40CLIENT]]>
+    </Condition>
+    
+    <!--Shortcut icon for URA2.0-->
+    <Icon Id="thing_magic_icon.ico" SourceFile="thing-magic-icon.ico" />
+    
+    <!--Set Installer's Icon in Add/Remove Programs -->    
+    <Property Id="ARPPRODUCTICON" Value="thing_magic_icon.ico" />
+    
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="APPLICATIONROOTDIRECTORY" Name="ThingMagic"/>        
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="ThingMagic"/>
+      </Directory>
+      <Directory Id ="DesktopFolder" Name="UniversalReaderAssistant2.0"/>
+    </Directory>
+
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+        <Component Id="ProductComponent" Guid="83c6aaba-17c0-4d13-8d13-516eb5b469da">          
+          <File Id='URA2' Name='UniversalReaderAssistant.exe' 
+                DiskId='1' Source="$(var.UniversalReaderAssistant2.0.TargetDir)\UniversalReaderAssistant.exe" 
+                KeyPath='yes' >
+            <Shortcut Id="desktop" Directory="DesktopFolder" 
+                      Name="UniversalReaderAssistant" WorkingDirectory='INSTALLLOCATION' 
+                      Icon="thing_magic_icon.ico" IconIndex="0" Advertise="yes" />
+          </File>
+          <File Id='MercuryAPI' Name='MercuryAPI.dll' 
+                Vital='yes' DiskId='1' Source="$(var.UniversalReaderAssistant2.0.TargetDir)\MercuryAPI.dll"/>
+          <File Id='LTK' Name='LLRP.dll' Vital='yes' 
+                DiskId='1' Source="$(var.UniversalReaderAssistant2.0.TargetDir)\LLRP.dll"/>
+          <File Id='Bonjour' Name='Interop.Bonjour.dll' Vital='yes'
+                   DiskId='1' Source="$(var.SolutionDir)URA2Installer\Interop.Bonjour.dll"/>
+        </Component>       
+    </DirectoryRef>
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="83c6aaba-17c0-4d13-8d13-516eb5b469db">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="UniversalReaderAssistant"
+                  Description="UniversalReaderAssistant"
+                  Target="[APPLICATIONROOTDIRECTORY]UniversalReaderAssistant.exe"
+                  WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
+        <!-- Step 1: Add the uninstall shortcut to your installer package -->
+        <Shortcut Id="UninstallProduct"
+                  Name="Uninstall UniversalReaderAssistant"
+                  Description="Uninstall UniversalReaderAssistant"
+                  Target="[System64Folder]msiexec.exe"
+                  Arguments="/x [ProductCode]"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Microsoft\MyApplicationName" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+
+    <Feature Id="ProductFeature" Title="URA2MSI" Level="1">
+      <ComponentRef Id="ProductComponent" />          
+      <ComponentRef Id="ApplicationShortcut" />
+    </Feature>
+    
+    
+	</Product>
+</Wix>

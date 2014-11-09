@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "USBSerCabInstaller", "USBSerCabInstaller\USBSerCabInstaller.vddproj", "{F4A0D165-F747-4DE3-AC0B-1F19CCC007D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4A0D165-F747-4DE3-AC0B-1F19CCC007D4}.Debug|Default.ActiveCfg = Debug
+		{F4A0D165-F747-4DE3-AC0B-1F19CCC007D4}.Debug|Default.Build.0 = Debug
+		{F4A0D165-F747-4DE3-AC0B-1F19CCC007D4}.Release|Default.ActiveCfg = Release
+		{F4A0D165-F747-4DE3-AC0B-1F19CCC007D4}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

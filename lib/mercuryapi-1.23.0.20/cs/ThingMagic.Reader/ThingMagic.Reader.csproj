@@ -1,0 +1,112 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78467BE9-1750-4E88-BEE1-D09CC30CF94A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThingMagic.Reader</RootNamespace>
+    <AssemblyName>MercuryAPI</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>mercuryapi.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\MercuryAPI.XML</DocumentationFile>
+    <NoWarn>0618,0612</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\MercuryAPI.xml</DocumentationFile>
+    <NoWarn>0618,0612</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LLRP, Version=1.0.0.6, Culture=neutral, PublicKeyToken=92f466b54dae9fc4, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ata.cs" />
+    <Compile Include="ByteConv.cs" />
+    <Compile Include="ByteFormat.cs" />
+    <Compile Include="ByteIO.cs" />
+    <Compile Include="Iso180006bUcode.cs" />
+    <Compile Include="LlrpFirmwareLoadOptions.cs" />
+    <Compile Include="Disposable.cs" />
+    <Compile Include="FeatureNotSupportedException.cs" />
+    <Compile Include="FirmwareLoadOptions.cs" />
+    <Compile Include="FixedReaderFirmwareLoadOptions.cs" />
+    <Compile Include="Gen2.cs" />
+    <Compile Include="GpioPin.cs" />
+    <Compile Include="IntUtil.cs" />
+    <Compile Include="Ipx.cs" />
+    <Compile Include="Iso180006b.cs" />
+    <Compile Include="LlrpReader.cs" />
+    <Compile Include="MultiFilter.cs" />
+    <Compile Include="MultiReadPlan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadAuthenticationEventArgs.cs" />
+    <Compile Include="Reader.cs" />
+    <Compile Include="ReaderCodeException.cs" />
+    <Compile Include="ReaderCommException.cs" />
+    <Compile Include="ReaderException.cs" />
+    <Compile Include="ReaderExceptionEventArgs.cs" />
+    <Compile Include="ReaderFatalException.cs" />
+    <Compile Include="ReaderParseException.cs" />
+    <Compile Include="ReaderUtil.cs" />
+    <Compile Include="ReadPlan.cs" />
+    <Compile Include="RqlFirmwareLoadOptions.cs" />
+    <Compile Include="RqlReader.cs" />
+    <Compile Include="SerialFirmwareLoadOptions.cs" />
+    <Compile Include="SerialReader.cs" />
+    <Compile Include="SerialReaderExceptions.cs" />
+    <Compile Include="SerialTransport.cs" />
+    <Compile Include="SerialTransportNative.cs" />
+    <Compile Include="SerialTransportTCP.cs" />
+    <Compile Include="SimpleReadPlan.cs" />
+    <Compile Include="StatsReportEventArgs.cs" />
+    <Compile Include="StatusReportEventArgs.cs" />
+    <Compile Include="StopOnTagCount.cs" />
+    <Compile Include="StopTrigger.cs" />
+    <Compile Include="StopTriggerReadPlan.cs" />
+    <Compile Include="TagAuthentication.cs" />
+    <Compile Include="TagData.cs" />
+    <Compile Include="TagFilter.cs" />
+    <Compile Include="TagLockAction.cs" />
+    <Compile Include="Tagop.cs" />
+    <Compile Include="TagProtocol.cs" />
+    <Compile Include="TagReadData.cs" />
+    <Compile Include="TagReadDataEventArgs.cs" />
+    <Compile Include="CollUtil.cs" />
+    <Compile Include="TagsObservationTrigger.cs" />
+    <Compile Include="TransportListenerEventArgs.cs" />
+    <Compile Include="VersionNumber.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mercuryapi.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

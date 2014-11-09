@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalReaderAssistant2.0", "UniversalReaderAssistant2.0\UniversalReaderAssistant2.0.csproj", "{094804CD-C842-489A-989B-0DD6155E7D1D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "URAMsi", "URAMsi\URAMsi.vdproj", "{D63B4933-2611-49C2-B456-1B81A4DCE04F}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "URA2Installer", "URA2Installer\URA2Installer.wixproj", "{69902BF6-9311-4407-B15B-572096598BC0}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "URABonjourSetup32", "URABonjourSetup32\URABonjourSetup32.wixproj", "{291D7866-DF7A-4B1D-8695-971E480EB11B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{094804CD-C842-489A-989B-0DD6155E7D1D} = {094804CD-C842-489A-989B-0DD6155E7D1D}
+		{69902BF6-9311-4407-B15B-572096598BC0} = {69902BF6-9311-4407-B15B-572096598BC0}
+	EndProjectSection
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "URABonjourSetup64", "URABonjourSetup64\URABonjourSetup64.wixproj", "{2085E4CC-93BB-4262-9343-B7DD456A7869}"
+	ProjectSection(ProjectDependencies) = postProject
+		{094804CD-C842-489A-989B-0DD6155E7D1D} = {094804CD-C842-489A-989B-0DD6155E7D1D}
+		{69902BF6-9311-4407-B15B-572096598BC0} = {69902BF6-9311-4407-B15B-572096598BC0}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{094804CD-C842-489A-989B-0DD6155E7D1D}.Debug|x86.ActiveCfg = Debug|x86
+		{094804CD-C842-489A-989B-0DD6155E7D1D}.Debug|x86.Build.0 = Debug|x86
+		{094804CD-C842-489A-989B-0DD6155E7D1D}.Release|x86.ActiveCfg = Release|x86
+		{094804CD-C842-489A-989B-0DD6155E7D1D}.Release|x86.Build.0 = Release|x86
+		{D63B4933-2611-49C2-B456-1B81A4DCE04F}.Debug|x86.ActiveCfg = Debug
+		{D63B4933-2611-49C2-B456-1B81A4DCE04F}.Debug|x86.Build.0 = Debug
+		{D63B4933-2611-49C2-B456-1B81A4DCE04F}.Release|x86.ActiveCfg = Release
+		{69902BF6-9311-4407-B15B-572096598BC0}.Debug|x86.ActiveCfg = Debug|x86
+		{69902BF6-9311-4407-B15B-572096598BC0}.Debug|x86.Build.0 = Debug|x86
+		{69902BF6-9311-4407-B15B-572096598BC0}.Release|x86.ActiveCfg = Release|x86
+		{69902BF6-9311-4407-B15B-572096598BC0}.Release|x86.Build.0 = Release|x86
+		{291D7866-DF7A-4B1D-8695-971E480EB11B}.Debug|x86.ActiveCfg = Debug|x86
+		{291D7866-DF7A-4B1D-8695-971E480EB11B}.Debug|x86.Build.0 = Debug|x86
+		{291D7866-DF7A-4B1D-8695-971E480EB11B}.Release|x86.ActiveCfg = Release|x86
+		{291D7866-DF7A-4B1D-8695-971E480EB11B}.Release|x86.Build.0 = Release|x86
+		{2085E4CC-93BB-4262-9343-B7DD456A7869}.Debug|x86.ActiveCfg = Debug|x86
+		{2085E4CC-93BB-4262-9343-B7DD456A7869}.Debug|x86.Build.0 = Debug|x86
+		{2085E4CC-93BB-4262-9343-B7DD456A7869}.Release|x86.ActiveCfg = Release|x86
+		{2085E4CC-93BB-4262-9343-B7DD456A7869}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

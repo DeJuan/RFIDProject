@@ -1,0 +1,15 @@
+MCS=gmcs
+# 0219 is "The variable XXX is assigned but its value is never used"
+# 0169 is "Private method XXX is never used"
+MCSOPTS= -debug+ -nowarn:0219,0169 -warnaserror
+
+all: mercuryapi.dll demo.exe
+
+mercuryapi.dll: ThingMagic.Reader/*.cs
+	$(MCS) $(MCSOPTS) -out:$@ -t:library $^
+
+demo.exe: mercuryapi.dll Program.cs
+	$(MCS) $(MCSOPTS) -out:$@ -lib:. -r:mercuryapi Program.cs
+
+clean:
+	rm -f mercuryapi.dll demo.exe *.mdb

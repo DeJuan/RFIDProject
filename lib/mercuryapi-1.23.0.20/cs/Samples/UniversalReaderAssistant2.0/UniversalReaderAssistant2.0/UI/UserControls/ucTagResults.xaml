@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="ThingMagic.URA2.ucTagResults"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"               
+             xmlns:local="clr-namespace:ThingMagic.URA2"
+             xmlns:TagResults="clr-namespace:ThingMagic.URA2.BL" DataContext="{Binding}">
+        <Grid>
+            <DataGrid CellStyle="{StaticResource Body_Content_DataGrid_Centering}" IsReadOnly="True" VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling"  ItemsSource="{Binding}" FontFamily="Arial" FontSize="12"
+                  Background="White" HorizontalScrollBarVisibility="Auto" AutoGenerateColumns="False"  Name="dgTagResults" IsTextSearchEnabled="True" CanUserResizeColumns="True"  CanUserSortColumns="True" CanUserReorderColumns="False" 
+                  CanUserResizeRows="False" LoadingRow="dgTagResults_LoadingRow" MouseRightButtonDown="dgTagResults_MouseRightButtonDown" LostFocus="dgTagResults_LostFocus">
+            <!--<DataGrid.ContextMenu>
+                <ContextMenu  Name="ctMenu" Visibility="Collapsed">
+                    <MenuItem Header="Write EPC" Click="MenuItem_Click" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>-->
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <CheckBox Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="False" Name="headerCheckBox" MouseEnter="headerCheckBox_MouseEnter">
+                                </CheckBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Path=Checked, UpdateSourceTrigger=PropertyChanged}" Name="theCheckbox"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn x:Name="serialNoColumn" Header="#" />
+                    <DataGridTextColumn x:Name="epcColumn"/>
+                <DataGridTextColumn x:Name="epcColumnInAscii" FontFamily="Consolas" Visibility="Collapsed" />
+                <DataGridTextColumn x:Name="epcColumnInReverseBase36" Visibility="Collapsed" />
+                <DataGridTextColumn x:Name="dataColumn" Visibility="Collapsed" />
+                <DataGridTextColumn x:Name="dataColumnInAscii" FontFamily="Consolas" Visibility="Collapsed" />
+                <!--<DataGridTextColumn x:Name="dataColumnReverseBase36" Visibility="Collapsed" />-->
+                <DataGridTextColumn x:Name="timeStampColumn" Binding="{Binding Mode=OneWay}"/>
+                    <DataGridTextColumn x:Name="rssiColumn" />
+                    <DataGridTextColumn x:Name="readCountColumn"/>
+                    <DataGridTextColumn x:Name="antennaColumn" Visibility="Collapsed"/>
+                    <DataGridTextColumn x:Name="protocolColumn" Visibility="Collapsed"/>
+                    <DataGridTextColumn x:Name="frequencyColumn" Visibility="Collapsed"/>
+                    <DataGridTextColumn x:Name="phaseColumn" Visibility="Collapsed"/>
+            </DataGrid.Columns>
+            </DataGrid>
+        <TextBox Visibility="Collapsed" Name="txtSelectedCell" Width="1"></TextBox>
+    </Grid>
+   
+</UserControl>

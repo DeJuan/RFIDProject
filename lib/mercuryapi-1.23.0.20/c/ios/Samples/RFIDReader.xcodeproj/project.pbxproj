@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10B95FA818EC12240051C7F2 /* OrangeLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B95FA618EC12240051C7F2 /* OrangeLight.png */; };
+		CFA2A8EE18C7818500F900E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA2A8ED18C7818500F900E5 /* UIKit.framework */; };
+		CFA2A8F018C7818500F900E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA2A8EF18C7818500F900E5 /* Foundation.framework */; };
+		CFA2A8F218C7818500F900E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA2A8F118C7818500F900E5 /* CoreGraphics.framework */; };
+		CFA2A8F818C7818600F900E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A8F618C7818600F900E5 /* InfoPlist.strings */; };
+		CFA2A8FA18C7818600F900E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A8F918C7818600F900E5 /* main.m */; };
+		CFA2A8FE18C7818600F900E5 /* RDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A8FD18C7818600F900E5 /* RDAppDelegate.m */; };
+		CFA2A90018C7818600F900E5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A8FF18C7818600F900E5 /* Default.png */; };
+		CFA2A90218C7818600F900E5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A90118C7818600F900E5 /* Default@2x.png */; };
+		CFA2A90418C7818600F900E5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A90318C7818600F900E5 /* Default-568h@2x.png */; };
+		CFA2A90718C7818600F900E5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A90518C7818600F900E5 /* MainStoryboard_iPhone.storyboard */; };
+		CFA2A90A18C7818600F900E5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A90818C7818600F900E5 /* MainStoryboard_iPad.storyboard */; };
+		CFA2A90D18C7818600F900E5 /* RDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A90C18C7818600F900E5 /* RDViewController.m */; };
+		CFA2A92C18C781CD00F900E5 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA2A92B18C781CD00F900E5 /* ExternalAccessory.framework */; };
+		CFA2A96818C783DF00F900E5 /* LogController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A96618C783DF00F900E5 /* LogController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CFA2A96918C783DF00F900E5 /* LogController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A96718C783DF00F900E5 /* LogController.xib */; };
+		CFA2A97218C7873000F900E5 /* GreenLight.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A96F18C7873000F900E5 /* GreenLight.png */; };
+		CFA2A97318C7873000F900E5 /* RedLight.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A97018C7873000F900E5 /* RedLight.png */; };
+		CFA2A97518C79E7200F900E5 /* PortconfigStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFA2A97418C79E7200F900E5 /* PortconfigStrings.plist */; };
+		CFA2AA0518CB363A00F900E5 /* RDRscMgrInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2AA0418CB363700F900E5 /* RDRscMgrInterface.m */; };
+		CFA2AA0818CB4F4400F900E5 /* RDReadValuesCollectonViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2AA0718CB4F3F00F900E5 /* RDReadValuesCollectonViewCell.m */; };
+		CFA2AA0B18CB517300F900E5 /* RFIDReadingDataModal.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA2AA0A18CB516C00F900E5 /* RFIDReadingDataModal.m */; };
+		CFA2AA0E18CB606400F900E5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA2AA0C18CB606400F900E5 /* Icon.png */; };
+		CFA2AA0F18CB606400F900E5 /* thingmagic_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA2AA0D18CB606400F900E5 /* thingmagic_logo.png */; };
+		CFA2AA1118CB644B00F900E5 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA2AA1018CB644B00F900E5 /* Default-Portrait.png */; };
+		CFAB42D918CF9DF8006A3C34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAB42D818CF9DF8006A3C34 /* QuartzCore.framework */; };
+		CFB4961F18FD8FD700FA5604 /* libRscMgrUniv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB4961E18FD8FD700FA5604 /* libRscMgrUniv.a */; };
+		CFB4962518FD8FE500FA5604 /* libMercuryAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB4962418FD8FE500FA5604 /* libMercuryAPI.a */; };
+		CFC010AB18CC38B700E0CDED /* libRscMgrUniv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC010AA18CC38B700E0CDED /* libRscMgrUniv.a */; };
+		FD15124618F827E3009BA847 /* libMercuryAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD15124518F827E3009BA847 /* libMercuryAPI.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10B95FA618EC12240051C7F2 /* OrangeLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrangeLight.png; sourceTree = "<group>"; };
+		CFA2A8EA18C7818500F900E5 /* RFIDReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RFIDReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFA2A8ED18C7818500F900E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CFA2A8EF18C7818500F900E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CFA2A8F118C7818500F900E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CFA2A8F518C7818500F900E5 /* RFIDReader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RFIDReader-Info.plist"; sourceTree = "<group>"; };
+		CFA2A8F718C7818600F900E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CFA2A8F918C7818600F900E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CFA2A8FB18C7818600F900E5 /* RFIDReader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RFIDReader-Prefix.pch"; sourceTree = "<group>"; };
+		CFA2A8FC18C7818600F900E5 /* RDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDAppDelegate.h; sourceTree = "<group>"; };
+		CFA2A8FD18C7818600F900E5 /* RDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDAppDelegate.m; sourceTree = "<group>"; };
+		CFA2A8FF18C7818600F900E5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CFA2A90118C7818600F900E5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CFA2A90318C7818600F900E5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CFA2A90618C7818600F900E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		CFA2A90918C7818600F900E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		CFA2A90B18C7818600F900E5 /* RDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDViewController.h; sourceTree = "<group>"; };
+		CFA2A90C18C7818600F900E5 /* RDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDViewController.m; sourceTree = "<group>"; };
+		CFA2A92B18C781CD00F900E5 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		CFA2A96518C783DF00F900E5 /* LogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogController.h; sourceTree = "<group>"; };
+		CFA2A96618C783DF00F900E5 /* LogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogController.m; sourceTree = "<group>"; };
+		CFA2A96718C783DF00F900E5 /* LogController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogController.xib; sourceTree = "<group>"; };
+		CFA2A96F18C7873000F900E5 /* GreenLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenLight.png; sourceTree = "<group>"; };
+		CFA2A97018C7873000F900E5 /* RedLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedLight.png; sourceTree = "<group>"; };
+		CFA2A97418C79E7200F900E5 /* PortconfigStrings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PortconfigStrings.plist; sourceTree = "<group>"; };
+		CFA2AA0318CB363400F900E5 /* RDRscMgrInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRscMgrInterface.h; sourceTree = "<group>"; };
+		CFA2AA0418CB363700F900E5 /* RDRscMgrInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRscMgrInterface.m; sourceTree = "<group>"; };
+		CFA2AA0618CB4F3400F900E5 /* RDReadValuesCollectonViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDReadValuesCollectonViewCell.h; sourceTree = "<group>"; };
+		CFA2AA0718CB4F3F00F900E5 /* RDReadValuesCollectonViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDReadValuesCollectonViewCell.m; sourceTree = "<group>"; };
+		CFA2AA0918CB516700F900E5 /* RFIDReadingDataModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFIDReadingDataModal.h; sourceTree = "<group>"; };
+		CFA2AA0A18CB516C00F900E5 /* RFIDReadingDataModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFIDReadingDataModal.m; sourceTree = "<group>"; };
+		CFA2AA0C18CB606400F900E5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		CFA2AA0D18CB606400F900E5 /* thingmagic_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thingmagic_logo.png; sourceTree = "<group>"; };
+		CFA2AA1018CB644B00F900E5 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		CFAB42D818CF9DF8006A3C34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CFB4961E18FD8FD700FA5604 /* libRscMgrUniv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libRscMgrUniv.a; sourceTree = "<group>"; };
+		CFB4962218FD8FE500FA5604 /* MercuryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MercuryAPI.h; sourceTree = "<group>"; };
+		CFB4962418FD8FE500FA5604 /* libMercuryAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMercuryAPI.a; sourceTree = "<group>"; };
+		CFC010A718CC38B700E0CDED /* redparkSerial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = redparkSerial.h; sourceTree = "<group>"; };
+		CFC010A818CC38B700E0CDED /* RscMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RscMgr.h; sourceTree = "<group>"; };
+		CFC010AA18CC38B700E0CDED /* libRscMgrUniv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libRscMgrUniv.a; sourceTree = "<group>"; };
+		CFC010AC18CC5CC500E0CDED /* RDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDConstants.h; sourceTree = "<group>"; };
+		FD15124518F827E3009BA847 /* libMercuryAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMercuryAPI.a; sourceTree = "<group>"; };
+		FDBD2D1818E96F0C00F692BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFA2A8E718C7818500F900E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFAB42D918CF9DF8006A3C34 /* QuartzCore.framework in Frameworks */,
+				CFA2A92C18C781CD00F900E5 /* ExternalAccessory.framework in Frameworks */,
+				CFA2A8EE18C7818500F900E5 /* UIKit.framework in Frameworks */,
+				CFB4962518FD8FE500FA5604 /* libMercuryAPI.a in Frameworks */,
+				CFA2A8F018C7818500F900E5 /* Foundation.framework in Frameworks */,
+				CFA2A8F218C7818500F900E5 /* CoreGraphics.framework in Frameworks */,
+				CFB4961F18FD8FD700FA5604 /* libRscMgrUniv.a in Frameworks */,
+				CFC010AB18CC38B700E0CDED /* libRscMgrUniv.a in Frameworks */,
+				FD15124618F827E3009BA847 /* libMercuryAPI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFA2A8E118C7818500F900E5 = {
+			isa = PBXGroup;
+			children = (
+				CFA2A8F318C7818500F900E5 /* RFIDReader */,
+				CFA2A8EC18C7818500F900E5 /* Frameworks */,
+				CFA2A8EB18C7818500F900E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFA2A8EB18C7818500F900E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFA2A8EA18C7818500F900E5 /* RFIDReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFA2A8EC18C7818500F900E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFAB42D818CF9DF8006A3C34 /* QuartzCore.framework */,
+				CFA2A92B18C781CD00F900E5 /* ExternalAccessory.framework */,
+				CFA2A8ED18C7818500F900E5 /* UIKit.framework */,
+				CFA2A8EF18C7818500F900E5 /* Foundation.framework */,
+				CFA2A8F118C7818500F900E5 /* CoreGraphics.framework */,
+				FDBD2D1818E96F0C00F692BE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFA2A8F318C7818500F900E5 /* RFIDReader */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4962018FD8FE500FA5604 /* MercuryAPI_Redpark_SDK */,
+				CFC010A518CC38B700E0CDED /* Redpark SDK */,
+				CFC010AC18CC5CC500E0CDED /* RDConstants.h */,
+				CFA2A8FC18C7818600F900E5 /* RDAppDelegate.h */,
+				CFA2A8FD18C7818600F900E5 /* RDAppDelegate.m */,
+				CFA2A90518C7818600F900E5 /* MainStoryboard_iPhone.storyboard */,
+				CFA2A90818C7818600F900E5 /* MainStoryboard_iPad.storyboard */,
+				CFA2AA0618CB4F3400F900E5 /* RDReadValuesCollectonViewCell.h */,
+				CFA2AA0718CB4F3F00F900E5 /* RDReadValuesCollectonViewCell.m */,
+				CFA2AA0918CB516700F900E5 /* RFIDReadingDataModal.h */,
+				CFA2AA0A18CB516C00F900E5 /* RFIDReadingDataModal.m */,
+				CFA2A90B18C7818600F900E5 /* RDViewController.h */,
+				CFA2A90C18C7818600F900E5 /* RDViewController.m */,
+				CFA2AA0318CB363400F900E5 /* RDRscMgrInterface.h */,
+				CFA2AA0418CB363700F900E5 /* RDRscMgrInterface.m */,
+				CFA2A96518C783DF00F900E5 /* LogController.h */,
+				CFA2A96618C783DF00F900E5 /* LogController.m */,
+				CFA2A96718C783DF00F900E5 /* LogController.xib */,
+				CFA2A8F418C7818500F900E5 /* Supporting Files */,
+				CFA2A96D18C7873000F900E5 /* Images */,
+			);
+			path = RFIDReader;
+			sourceTree = "<group>";
+		};
+		CFA2A8F418C7818500F900E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFA2A8F518C7818500F900E5 /* RFIDReader-Info.plist */,
+				CFA2A8F618C7818600F900E5 /* InfoPlist.strings */,
+				CFA2A8F918C7818600F900E5 /* main.m */,
+				CFA2A8FB18C7818600F900E5 /* RFIDReader-Prefix.pch */,
+				CFA2A8FF18C7818600F900E5 /* Default.png */,
+				CFA2A90118C7818600F900E5 /* Default@2x.png */,
+				CFA2A90318C7818600F900E5 /* Default-568h@2x.png */,
+				CFA2A97418C79E7200F900E5 /* PortconfigStrings.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFA2A96D18C7873000F900E5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				10B95FA618EC12240051C7F2 /* OrangeLight.png */,
+				CFA2AA1018CB644B00F900E5 /* Default-Portrait.png */,
+				CFA2AA0C18CB606400F900E5 /* Icon.png */,
+				CFA2AA0D18CB606400F900E5 /* thingmagic_logo.png */,
+				CFA2A96F18C7873000F900E5 /* GreenLight.png */,
+				CFA2A97018C7873000F900E5 /* RedLight.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		CFB4961D18FD8FD700FA5604 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4961E18FD8FD700FA5604 /* libRscMgrUniv.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CFB4962018FD8FE500FA5604 /* MercuryAPI_Redpark_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4962118FD8FE500FA5604 /* inc */,
+				CFB4962318FD8FE500FA5604 /* lib */,
+			);
+			name = MercuryAPI_Redpark_SDK;
+			path = ../../MercuryAPI_Redpark_SDK;
+			sourceTree = "<group>";
+		};
+		CFB4962118FD8FE500FA5604 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4962218FD8FE500FA5604 /* MercuryAPI.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+		CFB4962318FD8FE500FA5604 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4962418FD8FE500FA5604 /* libMercuryAPI.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CFC010A518CC38B700E0CDED /* Redpark SDK */ = {
+			isa = PBXGroup;
+			children = (
+				CFB4961D18FD8FD700FA5604 /* lib */,
+				CFC010A618CC38B700E0CDED /* inc */,
+			);
+			path = "Redpark SDK";
+			sourceTree = "<group>";
+		};
+		CFC010A618CC38B700E0CDED /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				CFC010A718CC38B700E0CDED /* redparkSerial.h */,
+				CFC010A818CC38B700E0CDED /* RscMgr.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFA2A8E918C7818500F900E5 /* RFIDReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFA2A92518C7818800F900E5 /* Build configuration list for PBXNativeTarget "RFIDReader" */;
+			buildPhases = (
+				CFA2A8E618C7818500F900E5 /* Sources */,
+				CFA2A8E718C7818500F900E5 /* Frameworks */,
+				CFA2A8E818C7818500F900E5 /* Resources */,
+				FDBD2CFF18E96CFE00F692BE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RFIDReader;
+			productName = RFIDReader;
+			productReference = CFA2A8EA18C7818500F900E5 /* RFIDReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFA2A8E218C7818500F900E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RD;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = qvantel;
+				TargetAttributes = {
+					CFA2A8E918C7818500F900E5 = {
+						DevelopmentTeam = H7X3CP6ZHV;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = CFA2A8E518C7818500F900E5 /* Build configuration list for PBXProject "RFIDReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CFA2A8E118C7818500F900E5;
+			productRefGroup = CFA2A8EB18C7818500F900E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFA2A8E918C7818500F900E5 /* RFIDReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFA2A8E818C7818500F900E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA2A8F818C7818600F900E5 /* InfoPlist.strings in Resources */,
+				CFA2A90018C7818600F900E5 /* Default.png in Resources */,
+				CFA2A90218C7818600F900E5 /* Default@2x.png in Resources */,
+				CFA2A90418C7818600F900E5 /* Default-568h@2x.png in Resources */,
+				CFA2A90718C7818600F900E5 /* MainStoryboard_iPhone.storyboard in Resources */,
+				CFA2A90A18C7818600F900E5 /* MainStoryboard_iPad.storyboard in Resources */,
+				CFA2A96918C783DF00F900E5 /* LogController.xib in Resources */,
+				CFA2A97218C7873000F900E5 /* GreenLight.png in Resources */,
+				CFA2A97318C7873000F900E5 /* RedLight.png in Resources */,
+				10B95FA818EC12240051C7F2 /* OrangeLight.png in Resources */,
+				CFA2A97518C79E7200F900E5 /* PortconfigStrings.plist in Resources */,
+				CFA2AA0E18CB606400F900E5 /* Icon.png in Resources */,
+				CFA2AA0F18CB606400F900E5 /* thingmagic_logo.png in Resources */,
+				CFA2AA1118CB644B00F900E5 /* Default-Portrait.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FDBD2CFF18E96CFE00F692BE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFA2A8E618C7818500F900E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA2A8FA18C7818600F900E5 /* main.m in Sources */,
+				CFA2A8FE18C7818600F900E5 /* RDAppDelegate.m in Sources */,
+				CFA2A90D18C7818600F900E5 /* RDViewController.m in Sources */,
+				CFA2A96818C783DF00F900E5 /* LogController.m in Sources */,
+				CFA2AA0518CB363A00F900E5 /* RDRscMgrInterface.m in Sources */,
+				CFA2AA0818CB4F4400F900E5 /* RDReadValuesCollectonViewCell.m in Sources */,
+				CFA2AA0B18CB517300F900E5 /* RFIDReadingDataModal.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CFA2A8F618C7818600F900E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFA2A8F718C7818600F900E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CFA2A90518C7818600F900E5 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFA2A90618C7818600F900E5 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		CFA2A90818C7818600F900E5 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFA2A90918C7818600F900E5 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFA2A92318C7818800F900E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		CFA2A92418C7818800F900E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		CFA2A92618C7818800F900E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RFIDReader/RFIDReader-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../src/api\"",
+				);
+				INFOPLIST_FILE = "RFIDReader/RFIDReader-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/RFIDReader/Redpark SDK/lib\"",
+					"\"$(SRCROOT)/../MercuryAPI_Redpark_SDK/lib\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = RFIDReader;
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CFA2A92718C7818800F900E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RFIDReader/RFIDReader-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../src/api\"",
+				);
+				INFOPLIST_FILE = "RFIDReader/RFIDReader-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/RFIDReader/Redpark SDK/lib\"",
+					"\"$(SRCROOT)/../MercuryAPI_Redpark_SDK/lib\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = RFIDReader;
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFA2A8E518C7818500F900E5 /* Build configuration list for PBXProject "RFIDReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA2A92318C7818800F900E5 /* Debug */,
+				CFA2A92418C7818800F900E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFA2A92518C7818800F900E5 /* Build configuration list for PBXNativeTarget "RFIDReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA2A92618C7818800F900E5 /* Debug */,
+				CFA2A92718C7818800F900E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFA2A8E218C7818500F900E5 /* Project object */;
+}

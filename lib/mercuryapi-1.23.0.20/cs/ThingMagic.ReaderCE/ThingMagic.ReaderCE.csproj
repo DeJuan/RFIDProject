@@ -1,0 +1,236 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE6AA516-F9AE-4136-B5D1-8D7306577522}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThingMagic.ReaderCE</RootNamespace>
+    <AssemblyName>MercuryAPICE</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>ThingMagic.ReaderCE</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>mercuryapi.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoWarn>0612,0618</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoWarn>0612,0618</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ThingMagic.Reader\Ata.cs">
+      <Link>Ata.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ByteConv.cs">
+      <Link>ByteConv.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ByteFormat.cs">
+      <Link>ByteFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ByteIO.cs">
+      <Link>ByteIO.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\CollUtil.cs">
+      <Link>CollUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\Disposable.cs">
+      <Link>Disposable.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\FeatureNotSupportedException.cs">
+      <Link>FeatureNotSupportedException.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\FirmwareLoadOptions.cs">
+      <Link>FirmwareLoadOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\Gen2.cs">
+      <Link>Gen2.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\GpioPin.cs">
+      <Link>GpioPin.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\IntUtil.cs">
+      <Link>IntUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\Ipx.cs">
+      <Link>Ipx.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\Iso180006b.cs">
+      <Link>Iso180006b.cs</Link>
+    </Compile>
+	<Compile Include="..\ThingMagic.Reader\Iso180006bUcode.cs">
+      <Link>Iso180006bUcode.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\LlrpFirmwareLoadOptions.cs">
+      <Link>LlrpFirmwareLoadOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\MultiFilter.cs">
+      <Link>MultiFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\MultiReadPlan.cs">
+      <Link>MultiReadPlan.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ReadAuthenticationEventArgs.cs">
+      <Link>ReadAuthenticationEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\Reader.cs">
+      <Link>Reader.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ReaderUtil.cs">
+      <Link>ReaderUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ReaderCodeException.cs">
+      <Link>ReaderCodeException.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ReaderCommException.cs">
+      <Link>ReaderCommException.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ReaderException.cs">
+      <Link>ReaderException.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ReaderExceptionEventArgs.cs">
+      <Link>ReaderExceptionEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ReaderFatalException.cs">
+      <Link>ReaderFatalException.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ReaderParseException.cs">
+      <Link>ReaderParseException.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\ReadPlan.cs">
+      <Link>ReadPlan.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\RqlFirmwareLoadOptions.cs">
+      <Link>RqlFirmwareLoadOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\RqlReader.cs">
+      <Link>RqlReader.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\SerialFirmwareLoadOptions.cs">
+      <Link>SerialFirmwareLoadOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\SerialReader.cs">
+      <Link>SerialReader.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\SerialReaderExceptions.cs">
+      <Link>SerialReaderExceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\SerialTransport.cs">
+      <Link>SerialTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\SerialTransportNative.cs">
+      <Link>SerialTransportNative.cs</Link>
+    </Compile>
+	<Compile Include="..\ThingMagic.Reader\SerialTransportTCP.cs">
+      <Link>SerialTransportTCP.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\SimpleReadPlan.cs">
+      <Link>SimpleReadPlan.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\StatsReportEventArgs.cs">
+      <Link>StatsReportEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\StatusReportEventArgs.cs">
+      <Link>StatusReportEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\StopOnTagCount.cs">
+      <Link>StopOnTagCount.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\StopTrigger.cs">
+      <Link>StopTrigger.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\StopTriggerReadPlan.cs">
+      <Link>StopTriggerReadPlan.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\TagAuthentication.cs">
+      <Link>TagAuthentication.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\TagData.cs">
+      <Link>TagData.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\TagFilter.cs">
+      <Link>TagFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\TagLockAction.cs">
+      <Link>TagLockAction.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\Tagop.cs">
+      <Link>Tagop.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\TagProtocol.cs">
+      <Link>TagProtocol.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\TagReadData.cs">
+      <Link>TagReadData.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\TagReadDataEventArgs.cs">
+      <Link>TagReadDataEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\TagsObservationTrigger.cs">
+      <Link>TagsObservationTrigger.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\TransportListenerEventArgs.cs">
+      <Link>TransportListenerEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\VersionNumber.cs">
+      <Link>VersionNumber.cs</Link>
+    </Compile>
+    <Compile Include="..\ThingMagic.Reader\FixedReaderFirmwareLoadOptions.cs">
+      <Link>FixedReaderFirmwareLoadOptions.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mercuryapi.snk" />
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

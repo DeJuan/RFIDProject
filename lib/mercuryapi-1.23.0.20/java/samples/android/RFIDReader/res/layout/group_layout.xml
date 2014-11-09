@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/history_title_below_bg">
+
+    <TextView
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40.0dip"
+        android:layout_gravity="center_vertical" 
+        android:gravity="left"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16.0sp" 
+        android:paddingTop="3.0dip"/>
+
+</LinearLayout>

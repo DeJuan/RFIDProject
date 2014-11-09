@@ -1,0 +1,360 @@
+"DeployProject"
+{
+"VSVersion" = "3:701"
+"ProjectType" = "8:{AB322303-2255-48EF-A496-5904EB18DA55}"
+"IsWebType" = "8:FALSE"
+"ProjectName" = "8:USBSerCabInstaller"
+"LanguageId" = "3:1033"
+"CodePage" = "3:1252"
+"SccProjectName" = "8:"
+"SccLocalPath" = "8:"
+"SccAuxPath" = "8:"
+"SccProvider" = "8:"
+    "Hierarchy"
+    {
+        "Entry"
+        {
+        "MsmKey" = "8:_4BFD7D9D7D864E8F85BA0F765E3FBA34"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+    }
+    "Configurations"
+    {
+        "Debug"
+        {
+        "DisplayName" = "8:Debug"
+        "IsDebugOnly" = "11:TRUE"
+        "IsReleaseOnly" = "11:FALSE"
+        "OutputFilename" = "8:Debug\\USBSerCabInstaller.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:FALSE"
+        "CertificateHash" = "8:"
+        "TimeStampServer" = "8:"
+        }
+        "Release"
+        {
+        "DisplayName" = "8:Release"
+        "IsDebugOnly" = "11:FALSE"
+        "IsReleaseOnly" = "11:TRUE"
+        "OutputFilename" = "8:Release\\USBSerCabInstaller.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:FALSE"
+        "CertificateHash" = "8:"
+        "TimeStampServer" = "8:"
+        }
+    }
+    "Deployable"
+    {
+        "File"
+        {
+            "{BA458234-9B71-4F46-8107-E91156377184}:_4BFD7D9D7D864E8F85BA0F765E3FBA34"
+            {
+            "SourcePath" = "8:C:\\WM6530\\PLATFORM\\Zylonite_mhlv\\target\\ARMV4I\\retail\\USBSER.dll"
+            "TargetName" = "8:USBSER.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_972292FD17A94E17BB1055C1F3A90949"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+        }
+        "Folder"
+        {
+            "{D5B00AC1-E6C3-4CC5-90FF-8E0F53D9E5E0}:_26B2A162BFA743279C07A8B14D24B3F4"
+            {
+            "DefaultLocation" = "8:%InstallDir%"
+            "Name" = "8:#1920"
+            "Condition" = "8:"
+            "Property" = "8:%InstallDir%"
+                "Folders"
+                {
+                }
+            }
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_972292FD17A94E17BB1055C1F3A90949"
+            {
+            "Name" = "8:#1912"
+            "Condition" = "8:"
+            "Property" = "8:%CE2%"
+                "Folders"
+                {
+                }
+            }
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_E6B04F1E860F424395604AD0D1C3B68D"
+            {
+            "Name" = "8:#1911"
+            "Condition" = "8:"
+            "Property" = "8:%CE1%"
+                "Folders"
+                {
+                }
+            }
+        }
+        "Product"
+        {
+        "Name" = "8:Microsoft Visual Studio"
+        "ProductName" = "8:USBSerCabInstallerV1"
+        "Manufacturer" = "8:ThingMagic"
+        "OSVersionMin" = "8:4.0"
+        "OSVersionMax" = "8:6.99"
+        "NoUninstall" = "11:FALSE"
+        "Compress" = "11:FALSE"
+        "CESetupDLL" = "8:"
+        }
+        "ProjectOutput"
+        {
+        }
+        "Registry"
+        {
+            "HKLM"
+            {
+                "Keys"
+                {
+                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_506D90BF061C4A30BB0FF4BA57C85F4A"
+                    {
+                    "Name" = "8:Drivers"
+                    "Condition" = "8:"
+                        "Keys"
+                        {
+                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_5B3A1A1666AF42BDB69EEB7661CDA0FE"
+                            {
+                            "Name" = "8:USB"
+                            "Condition" = "8:"
+                                "Keys"
+                                {
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_BEB32F7B6E4A4F368A5906ED4E55F9A3"
+                                    {
+                                    "Name" = "8:LoadClients"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_08F8280FD0D6404E935BBF72E05E52B2"
+                                            {
+                                            "Name" = "8:8200_4098"
+                                            "Condition" = "8:"
+                                                "Keys"
+                                                {
+                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_7060D4C9E95947C3841B02FD2EA16476"
+                                                    {
+                                                    "Name" = "8:Default"
+                                                    "Condition" = "8:"
+                                                        "Keys"
+                                                        {
+                                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_E34ED02923DE469E8AC7FF6B8C9375A8"
+                                                            {
+                                                            "Name" = "8:Default"
+                                                            "Condition" = "8:"
+                                                                "Keys"
+                                                                {
+                                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_69CB13FB3AEB4A0DAB877F3C3D1C5282"
+                                                                    {
+                                                                    "Name" = "8:USBSER_CLASS"
+                                                                    "Condition" = "8:"
+                                                                        "Keys"
+                                                                        {
+                                                                        }
+                                                                        "Values"
+                                                                        {
+                                                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_8BD7E531E0924149AE0BBA3C13EA9439"
+                                                                            {
+                                                                            "Name" = "8:DLL"
+                                                                            "Condition" = "8:"
+                                                                            "ValueTypes" = "3:1"
+                                                                            "Value" = "8:USBSER.dll"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_1C4ABD56EA9D41909559D25B1D53B19D"
+                                            {
+                                            "Name" = "8:8200_4100"
+                                            "Condition" = "8:"
+                                                "Keys"
+                                                {
+                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_A9A8976C837B43C1AF234D4540E97FCE"
+                                                    {
+                                                    "Name" = "8:Default"
+                                                    "Condition" = "8:"
+                                                        "Keys"
+                                                        {
+                                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_047163E767794FE6B537F102BBB25E6E"
+                                                            {
+                                                            "Name" = "8:Default"
+                                                            "Condition" = "8:"
+                                                                "Keys"
+                                                                {
+                                                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_C9313101B4534504B92700D17FFBC233"
+                                                                    {
+                                                                    "Name" = "8:USBSER_CLASS"
+                                                                    "Condition" = "8:"
+                                                                        "Keys"
+                                                                        {
+                                                                        }
+                                                                        "Values"
+                                                                        {
+                                                                            "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_AD14E61EB7604D4C808BD47D5E8B19D9"
+                                                                            {
+                                                                            "Name" = "8:DLL"
+                                                                            "Condition" = "8:"
+                                                                            "ValueTypes" = "3:1"
+                                                                            "Value" = "8:USBSER.dll"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                    "{B1EBC968-6B66-4532-A885-748B79AF4477}:_DCD6EBE62E004F63AFDC9AA88C3E8105"
+                                    {
+                                    "Name" = "8:ClientDrivers"
+                                    "Condition" = "8:"
+                                        "Keys"
+                                        {
+                                            "{B1EBC968-6B66-4532-A885-748B79AF4477}:_6577539E343C4928A0966B281C2A7AC4"
+                                            {
+                                            "Name" = "8:USBSER_CLASS"
+                                            "Condition" = "8:"
+                                                "Keys"
+                                                {
+                                                }
+                                                "Values"
+                                                {
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_1E10B4D308CD4A608F9EF09BD159611D"
+                                                    {
+                                                    "Name" = "8:DLL"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:USBSER.dll"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_28F2FD99FFA64F92A4DA8CFB13BE95A0"
+                                                    {
+                                                    "Name" = "8:DeviceArrayIndex"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:3"
+                                                    "Value" = "3:1"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_2FE1D7FDFE6E415CA6F7C23F7992EC76"
+                                                    {
+                                                    "Name" = "8:FileLogging"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:3"
+                                                    "Value" = "3:0"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_4201DFC1F60D44F89A84A92D48A52D6B"
+                                                    {
+                                                    "Name" = "8:ICLASS"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:CC5195AC-BA49-48a0-BE17-DF6D1B0173DD"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_6A21CCA521D54546B85A56A87CA0CC92"
+                                                    {
+                                                    "Name" = "8:Index"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:3"
+                                                    "Value" = "3:6"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_B2F270FA485A4F2E89BB601B527564F8"
+                                                    {
+                                                    "Name" = "8:DebugLogLevel"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:3"
+                                                    "Value" = "3:1"
+                                                    }
+                                                    "{C3684F64-58E2-4092-8E3C-D7483080DE5A}:_B4DEEA254DE64EECBAF8BE1417868ED4"
+                                                    {
+                                                    "Name" = "8:Prefix"
+                                                    "Condition" = "8:"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:COM"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    }
+                }
+            }
+            "HKCU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKCR"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKPU"
+            {
+                "Keys"
+                {
+                }
+            }
+        }
+        "Shortcut"
+        {
+        }
+    }
+}

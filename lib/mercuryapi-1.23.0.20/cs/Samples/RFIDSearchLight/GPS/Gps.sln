@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpsSample", "GpsSample\GpsSample.csproj", "{3EE8F42C-9902-47AF-B186-D159E90124F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.WindowsMobile.Samples.Location", "Microsoft.WindowsMobile.Samples.Location.csproj", "{DB77C1EE-A383-4CD5-A107-1C7C26A9E6B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB77C1EE-A383-4CD5-A107-1C7C26A9E6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB77C1EE-A383-4CD5-A107-1C7C26A9E6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB77C1EE-A383-4CD5-A107-1C7C26A9E6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB77C1EE-A383-4CD5-A107-1C7C26A9E6B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE8F42C-9902-47AF-B186-D159E90124F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE8F42C-9902-47AF-B186-D159E90124F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE8F42C-9902-47AF-B186-D159E90124F2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3EE8F42C-9902-47AF-B186-D159E90124F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE8F42C-9902-47AF-B186-D159E90124F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE8F42C-9902-47AF-B186-D159E90124F2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

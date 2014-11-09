@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Baud</key>
+	<array>
+		<string>115200</string>
+		<string>57600</string>
+		<string>38400</string>
+		<string>19200</string>
+		<string>9600</string>
+		<string>4800</string>
+		<string>2400</string>
+		<string>1200</string>
+	</array>
+	<key>Data Bits</key>
+	<array>
+		<string>8</string>
+		<string>7</string>
+	</array>
+	<key>Parity</key>
+	<array>
+		<string>none</string>
+		<string>odd</string>
+		<string>even</string>
+	</array>
+	<key>Stop Bits</key>
+	<array>
+		<string>1</string>
+		<string>2</string>
+	</array>
+</dict>
+</plist>

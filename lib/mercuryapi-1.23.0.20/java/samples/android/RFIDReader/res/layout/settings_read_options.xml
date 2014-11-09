@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dip"
+    android:background="@drawable/table_style"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:background="@drawable/table_style"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.40"
+            android:gravity="center"
+            android:text="@string/ReadTime" />
+
+        <EditText
+            android:id="@+id/read_time_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.60"
+            android:background="@drawable/edit_text_style"
+            android:gravity="left"
+            android:inputType="time"
+            android:maxLength="5"
+            android:paddingLeft="5dp"
+            android:text="@string/DefaultTime" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:background="@drawable/table_style"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/embedded_enabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Enable" />
+
+        <LinearLayout
+            android:id="@+id/embedded_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MemBank" />
+
+                <Spinner
+                    android:id="@+id/embedded_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/MemBank_array" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Start" />
+
+                <EditText
+                    android:id="@+id/embedded_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edit_text_style"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="5dp"
+                    android:text="@string/zero"
+                    android:width="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="@string/Lenght" />
+
+                <EditText
+                    android:id="@+id/embedded_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/edit_text_style"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="5dp"
+                    android:text="@string/zero"
+                    android:width="30dp" />
+            </LinearLayout>
+      </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

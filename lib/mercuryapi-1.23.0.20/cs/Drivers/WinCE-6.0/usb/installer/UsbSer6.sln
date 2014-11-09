@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "UsbSer6", "UsbSer6\UsbSer6.vddproj", "{0439DE7D-BF90-459B-B8F2-BA2B3E59FE2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0439DE7D-BF90-459B-B8F2-BA2B3E59FE2D}.Debug|Default.ActiveCfg = Debug
+		{0439DE7D-BF90-459B-B8F2-BA2B3E59FE2D}.Debug|Default.Build.0 = Debug
+		{0439DE7D-BF90-459B-B8F2-BA2B3E59FE2D}.Release|Default.ActiveCfg = Release
+		{0439DE7D-BF90-459B-B8F2-BA2B3E59FE2D}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

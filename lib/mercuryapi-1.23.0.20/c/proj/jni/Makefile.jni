@@ -1,0 +1,42 @@
+SRCDIR=../..
+APIDIR=../../..
+
+#### Common options
+CFLAGS  += -I$(SRCDIR)/src/api
+CFLAGS  += -fpic
+
+#### Platform-specific options
+UNAME_S := $(shell uname -s)
+
+ifeq ($(UNAME_S),Linux)
+# Debian or Ubuntu Linux
+LIB=libSerialTransportNative.so.0
+CFLAGS  += -I/usr/lib/jvm/java-6-sun/include -I/usr/lib/jvm/java-6-sun/include/linux
+CFLAGS  += -I/usr/lib/jvm/java-6-openjdk/include -I/usr/lib/jvm/java-6-openjdk/include/linux
+CFLAGS  += -I/usr/lib/jvm/sun-jdk-1.6/include/ -I/usr/lib/jvm/sun-jdk-1.6/include/linux
+LDFLAGS += -shared -Wl,-soname,$(LIB)
+endif
+
+ifeq ($(UNAME_S),Darwin)
+# Mac OS X
+LIB      = libSerialTransportNative.dylib
+CFLAGS  += -FJavaVM -FIOKit -arch i386 -arch x86_64
+CFLAGS  += -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/JavaVM.framework/Versions/A/Headers
+CFLAGS  += -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/JavaVM.framework/Versions/A/Headers
+LDFLAGS += -dynamiclib -arch i386 -arch x86_64
+endif
+
+DBG = -O2
+WARNS= -Werror -Wall
+
+CFLAGS += $(DBG) $(WARNS) -DTMR_ENABLE_JNI_SERIAL_READER_ONLY
+
+OBJS += $(SRCDIR)/src/jni/nativeSerial.o
+OBJS += $(SRCDIR)/src/api/serial_transport_posix.o
+OBJS += $(SRCDIR)/src/api/tmr_strerror.o
+
+$(LIB): $(OBJS)
+	$(CC) $(LDFLAGS) -o $(LIB) $(OBJS)
+
+clean:
+	rm -f $(LIB) $(OBJS)

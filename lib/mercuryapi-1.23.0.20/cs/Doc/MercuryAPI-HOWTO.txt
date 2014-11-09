@@ -1,0 +1,21 @@
+/*
+ * How to use MercuryAPI.dll in a C# project.
+
+In Visual Studio 2005,
+ * Create a new C# Console Application.
+   * Menu: File/New/Project
+   * Select Visual C#/Windows/Console Application
+   * Pick a name (e.g., MercuryAPIHello) and press OK
+ * Add a reference to the MercuryAPI library.
+   * Right-click on References in Solution Explorer window
+   * Select Add Reference from menu
+   * Select Browse tab in Add Reference dialog
+   * Locate MercuryAPI.dll and add it (double-click MercuryAPI.dll)
+ * Write your program.
+   * Add "using ThingMagic;" at the top of your program
+   * In your Main method, create a reader object and read some tags.
+     * See sample code at the end of this document.
+     * Edit COM port number to match your setup.
+ * Run your program.
+   * Menu: Debug/Start Without Debugging
+ * If you will be distributing your program, remember to include a copy of ThingMagic.Reader.dll (unless it is already installed in the path of the target system.) */

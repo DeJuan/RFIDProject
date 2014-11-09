@@ -1,0 +1,140 @@
+Date: 2014/4/25
+
+INFO:
+====
+This README.IOS file provides the information about
+	- iOS code organisation in MercuryAPI distribution
+	- How to build Mercury API library for ios
+	- How to build and run the sample application on iOS device
+	- How to generate .ipa file and install in iOS devices
+	
+
+iOS code organisation in MercuryAPI distribution
+================================================
+
+	- iOS code in MercuryAPI distribution lies under 
+          Mercuryapi-1.xx.xx.xx/c/ios directory
+	- This code is organised in to two folders namely
+          MercuryAPI and Samples
+	- MercuryAPI directory contains xcode project and related files
+          to build the MercuryAPI library for iOS
+	- Samples directory contains RFID Reader application project
+          and assoicated files
+
+How to build API library file for ios
+=====================================
+	- Double click on MercuryAPI.xcodeproj in Mercury API folder,
+          it will launch the Xcode IDE.
+	- InHow to generate .ipa file and install in iOS devices the TARGETS section, select the UniversalLib option.
+	- Go to Product in the Menubar and select and click the Build option.
+	- Once the build is success, it will generate the folder MercuryAPI_Repark_SDK
+          in /c/ios director. This folder has two subfolders "inc" and "lib".
+          "inc" folder has the interface definitions for Redpark library calls from API
+          and "lib" has API library with transport interface for iOS.
+	- Any app developers can simply include this library and header files and build 
+	  the application using Redpark cables.
+
+How to build and run the sample application on iOS device
+=========================================================
+	- Double click on MercuryAPI.xcodeproj in Mercury API folder,
+          it will launch the Xcode IDE.
+	- Go to Product in the Menubar and select and click the Build option.
+	- If device is connected application will be automatically installed
+          on the device.
+
+
+How to generate .ipa file
+=========================
+	- Open Xcode tool from menu
+	- Select Product from Menu
+	- Select Archive from drop down
+	- Window will be launched with existing projects name
+	- You will find two buttons (validate and distribute) on the top of the listed projects
+	- Press on distribute button,select save for enterprise or adhoc deployment and
+          click next button,it takes automatic provision certificate and click export.
+	- It will launch another window to specify the IPA file name and path ,press
+          save button
+	- Click OK button
+
+Installing .ipa on iOS device
+=============================
+	- Connect the device to PC / Laptop
+	- Open iTunes and connect the device
+	- You will find the device name on the top right side of iTunes software 
+	- Click on device name will open another screen
+	- In that screen click on APP tab
+	- Drag the .ipa file to iTunes software
+	- We will find RFID demo app in the device
+	- Click on install button and click apply button
+
+Device Provisioning /Profile creation
+=====================================
+
+	- Go to Apple developer account
+         (https://daw.apple.com/cgi-bin/WebObjects/DSAuthWeb.woa/wa/login?&appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2F%2Fmembercenter%2Findex.action)
+
+	- Login with your credentials
+
+	- Goto certificate, Identifiers & profiles (Mange your certificates, APP Id's, devices etc.,)
+
+	- In certificates -> development category click on '+' sign on top right side of the pan
+	- For app development you need to select category (in this case we need to select IOS App development)
+	- Press continue
+	- It will ask for CSR certificate, we have to include CSR certificate.
+
+Generating CSR certificate:
+===========================
+
+	- In MACBOOK open " Keychain Access Tool"
+	- In Menu bar select keychain access and select certificate assistant.
+	- Request certificate from certificate authority, it will launch window fill up the required information.
+	- Change the request to save to disk and press continue.
+	- It will ask for path and .csr file will be saved to your local path
+	- It will create .cer file(certificate file), download to local path and then press done.
+
+Generating provision profile
+============================
+
+	- In https://developer.apple.com/account/ios/certificate/certificateCreate.action
+	- Under provision profile category, select development
+	- By clicking on '+' sign  and click continue ,we can upload .cer file.
+	- It will ask for APP id and device UDID.
+
+How to see UDID
+===============
+		
+	- Connect Device and open iTunes click on serial id it will show copy UDID number
+	- Under Devices click ”+” under register Devices Enter Device name and UDID Number
+	- Then click on register it will save
+
+Creating APP ID
+===============
+
+	- In https://developer.apple.com/account/ios/certificate/certificateCreate.action
+
+	- Under Identifiers category, select App Ids
+	- Click “+” sign and enter App id Description, App ID Sufix
+		Explicit App ID – Only Used for Selected Project
+			ex:com.example.appname
+		WildCard App ID- Used for Multiple Apps
+			ex: com.example.*
+	- Generate App ID.
+	- Click on Generate button
+	- You can download provision profile.
+
+To Run the Project on your Device Provision File should create :
+
+	- After Creation of Provision Certificate Double Click on Provision Certificate 
+	- Open XCode Tool and select target 
+	- In general / Identifier category change the bundle identifier
+	- In build setting / code signing identity change the provision profile name to which we have created in the above steps.
+	- Clean the project
+	- In Xcode tool in Menu bar select product click on clean
+	- You will get message "Cleaned successfully"
+	- Build the project
+		In Xcode tool in Menu bar select product click on build
+		You will get message "Build successfully"
+NOTE
+====
+	- When we build for first time it will ask for key chain allow access 
+          and we need to select “always allow”.

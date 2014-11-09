@@ -1,0 +1,110 @@
+The Mercury C API is designed to be ported and run on a wide variety
+of runtime environments, ranging from full host operating systems to
+bare-metal embedded platforms. Due to the widely varying capabilites
+of such systems and the mechanisms by which they are provided, the API
+has specific hooks in place for the services it needs. 
+
+A few operations involving time and timestamps must be provided by the
+user if they are not building on a POSIX host system. The file osdep.h
+describes the timer and sleep functions that the host must supply for
+correct operation of the API. The file osdep_dummy.c contains stub
+implementations that deevlopes can fill with appropriate code.
+
+In order to communicate with a serial reader, the API must be provided
+with a set of routines that transmit and recieve bytes, set the baud
+rate, and so on. The file serial_reader_dummy.c provides a stub
+implementation that developers can fill out with code appropriate to
+their platform. The serial_reader_posix.c file provides an
+implenentation for POSIX hosts.
+
+The file "tm_config.h" in the sources contains #define statements that
+enable particular features of the C API. Some features need to be
+disabled if the target platform does not have the relevant
+infrastructure support - the LLRP serial transport requires BSD
+socket-style networking, and the background reads feature requires
+POSIX threads. Disabling features will also reduce the footprint of
+the compiled code, and reducing the feature set to the minimum
+necessary is recommended for small platforms. The following features
+can be enabled, disabled, or adjusted:
+
+
+  TMR_ENABLE_SERIAL_READER
+
+This symbol must always be defined. Only serial readers are currently
+supported by this API.
+
+
+  TMR_ENABLE_SERIAL_TRANSPORT_NATIVE
+
+Defining this symbol enables native serial port access for hosted
+platforms that provide such services. The build system compiles native
+support for POSIX platforms.
+
+
+  TMR_ENABLE_SERIAL_TRANSPORT_LLRP
+
+Defining this symbol enables support for serial communications
+tunneled inside LLRP, a ThingMagic-specific extention. It requires a
+BSD sockets interface to compile and run.
+
+
+  TMR_ENABLE_ISO180006B
+
+Defining this symbol enables full support for operations on ISO180006B
+tags. Undefining it will remove the parameters and tag commands
+specific to ISO180006B.
+
+
+  TMR_ENABLE_BACKGROUND_READS
+
+Defining this symbol enables the TMR_startReading() and
+TMR_stopReading() functions. They require a POSIX threads interface to
+compile and run.
+
+
+  TMR_ENABLE_ERROR_STRINGS
+
+Defining this enables the TMR_strerror() function, which translates
+TMR_Status error codes into human-readable error message
+strings. Undefining it saves the space of the error message strings
+and is recommended on embedded applications.
+
+
+  TMR_ENABLE_PARAM_STRINGS
+
+Defining this enables the TMR_paramName() and TMR_paramID() functions,
+which translate between string parameter names and TMR_PARAM
+constants. Undefining it saves the space of the parameter strings and
+is recommended on embedded applications.
+
+
+  TMR_SR_MAX_ANTENNA_PORTS
+
+This symbol must be defined to an integer value. It sizes certain
+internal data structures relating to the number of antenna ports on
+the connected reader device. Reducing this to the number of ports that
+will be used on the device will save some runtime memory.
+
+
+  TMR_MAX_SERIAL_DEVICE_NAME_LENGTH
+
+This symbol is only relevant if TMR_ENABLE_SERIAL_TRANSPORT_NATIVE is
+enabled. It limits the amount of storage used for the path name to the
+serial device (com1, /dev/ttyS0, etc.)
+
+
+  TMR_BIG_ENDIAN_HOST
+
+This symbol is not defined by default. When it is defined, the
+implementation will take advantage of the memory byte order to
+eliminate some conversions between user data and reader data. It will
+cause erroneous operation on a little-endian host.
+
+
+  TMR_USE_HOST_C_LIBRARY
+
+This symbol is not defined by default. When it is defined, the
+implementation will use the mem*() and str*() functions provided by
+the compilation environment, rather than its own included, minimal
+implementations. Enabling this may save memory if the linked
+application is already using such functions.

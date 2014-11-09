@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/statistic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/table_style"
+        android:orientation="vertical"
+        android:padding="3dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:padding="5dip"
+                android:text="@string/unique_tag_count" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/unique_tag_count"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:padding="5dip"
+                android:text="@string/zero" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:padding="5dip"
+                android:text="@string/total_tag_count" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/total_tag_count"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:padding="5dip"
+                android:text="@string/zero" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:padding="5dip"
+                android:text="@string/time_taken" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/time_taken"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:padding="5dip"
+                android:text="@string/zero" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+[Version]
+Signature="$Windows NT$"
+Provider="ThingMagic"
+CESignature="$Windows CE$"
+
+[CEStrings]
+AppName="RFIDSearchLightInstaller"
+InstallDir=%CE1%\%AppName%
+
+[Strings]
+Manufacturer="ThingMagic"
+
+[CEDevice]
+VersionMin=4.0
+VersionMax=6.99
+BuildMax=0xE0000000
+
+[DefaultInstall]
+CEShortcuts=Shortcuts
+AddReg=RegKeys
+CopyFiles=Files.Common1,Files.Common2,Files.Common3,Files.Common4,Files.Common5,Files.Common6
+CESetupDLL="MCSetup.dll"
+
+[SourceDisksNames]
+1=,"Common1",,"C:\Program Files\Microsoft.NET\SDK\CompactFramework\v3.5\WindowsCE\"
+2=,"Common2",,"C:\Program Files\Microsoft.NET\SDK\CompactFramework\v3.5\WindowsCE\Diagnostics\"
+3=,"Common3",,"..\..\..\RFIDSearchLight\FtdiVcpInstaller\Release\"
+4=,"Common4",,"..\..\..\RFIDSearchLight\RFIDSearchLightCab\ManualEdit\"
+5=,"Common5",,"..\..\..\multicabinstall\mcsetup\Windows Mobile 6 Professional SDK (ARMV4I)\Release\"
+6=,"Common6",,"..\..\..\multicabinstall\multicab\Windows Mobile 6 Professional SDK (ARMV4I)\Release\"
+
+[SourceDisksFiles]
+"NETCFv35.wm.armv4i.cab"=1
+"NETCFv35.Messages.EN.wm.cab"=2
+"FtdiVcpInstaller.CAB"=3
+"RFIDSearchLight.CAB"=4
+"MCSetup.dll"=5
+"multicab.exe"=6
+
+[DestinationDirs]
+Shortcuts=0,%CE2%\Start Menu
+Files.Common1=0,"%InstallDir%"
+Files.Common2=0,"%InstallDir%"
+Files.Common3=0,"%InstallDir%"
+Files.Common4=0,"%InstallDir%"
+Files.Common5=0,"%InstallDir%"
+Files.Common6=0,"%InstallDir%"
+
+[Files.Common1]
+"NETCFv35.wm.armv4i.cab","NETCFv35.wm.armv4i.cab",,0
+
+[Files.Common2]
+"NETCFv35.Messages.EN.wm.cab","NETCFv35.Messages.EN.wm.cab",,0
+
+[Files.Common3]
+"FtdiVcpInstaller.CAB","FtdiVcpInstaller.CAB",,0
+
+[Files.Common4]
+"RFIDSearchLight.CAB","RFIDSearchLight.CAB",,0
+
+[Files.Common5]
+"MCSetup.dll","MCSetup.dll",,0
+
+[Files.Common6]
+"multicab.exe","multicab.exe",,0
+
+
+[Shortcuts]
+
+[RegKeys]
+"HKCU","Software\ChainedCabSample\MultiCab","InstallCabName","0x00000000","RFIDSearchLightInstaller"
+"HKCU","Software\ChainedCabSample\RFIDSearchLightInstaller","1","0x00000000","\Program Files\RFIDSearchLightInstaller\RFIDSearchLight.CAB"
+"HKCU","Software\ChainedCabSample\RFIDSearchLightInstaller","2","0x00000000","\Program Files\RFIDSearchLightInstaller\FtdiVcpInstaller.CAB"
+"HKCU","Software\ChainedCabSample\RFIDSearchLightInstaller","3","0x00000000","\Program Files\RFIDSearchLightInstaller\NETCFv35.Messages.EN.wm.cab"
+"HKCU","Software\ChainedCabSample\RFIDSearchLightInstaller","4","0x00000000","\Program Files\RFIDSearchLightInstaller\NETCFv35.wm.armv4i.cab"

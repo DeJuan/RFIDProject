@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <include layout="@layout/activity_settings" />
+
+    <RelativeLayout
+        android:id="@+id/displayView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/main_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/title_background_img" >
+
+            <ImageView
+                android:id="@+id/main_title_logo"
+                style="@style/main_title_text_img"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25sp"
+                android:contentDescription="@string/app_name" />
+
+            <Button
+                android:id="@+id/settings_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/main_menu_btn_selector" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/main_title"
+            android:background="#ff3782c3"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginBottom="4.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/main_btn_background" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="3dp" >
+
+                        <com.thingmagic.rfidreader.customViews.CustomEditText
+                            android:id="@+id/search_edit_text"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="0.55"
+                            android:background="@drawable/rounded_edittext"
+                            android:drawableLeft="@drawable/reader_search"
+                            android:drawableRight="@drawable/field_clear"
+                            android:inputType="text"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <!--
+                             <TextView 
+                            android:id="@+id/SerialList"
+							android:layout_width="0dp"
+						   	android:layout_height="wrap_content"
+						   	android:layout_weight="0.70"
+                            android:padding="0sp"
+	                     	android:singleLine="false"
+						    android:text="very long text that will be wrapped to next line" 
+						    android:visibility="gone"/>
+                        -->
+
+                        <Spinner
+                            android:id="@+id/SerialList"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.70"
+                            android:ellipsize="marquee"
+                            android:padding="0sp"
+                            android:prompt="@string/SerialList"
+                            android:singleLine="false"
+                            android:spinnerMode="dropdown"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/Connect_button"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="0.30"
+                            android:text="@string/Connect" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ValidationField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF0000"
+                        android:visibility="gone" />
+
+                    <RadioGroup
+                        android:id="@+id/Reader_radio_group"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/NetworkReader_radio_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:checked="true"
+                            android:text="@string/NetworkReader" />
+
+                        <RadioButton
+                            android:id="@+id/SerialReader_radio_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:checked="false"
+                            android:text="@string/SerialReader" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/ServiceLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <RadioGroup
+                            android:id="@+id/search_radio_group"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/SyncRead_radio_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:checked="true"
+                                android:text="@string/SyncRead" />
+
+                            <RadioButton
+                                android:id="@+id/AsyncRead_radio_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:checked="false"
+                                android:text="@string/AsyncRead" />
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp" >
+
+                            <Button
+                                android:id="@+id/Read_button"
+                                style="?android:attr/buttonStyleInset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.05"
+                                android:height="10dp"
+                                android:text="@string/Read" />
+
+                            <ProgressBar
+                                android:id="@+id/progressbar"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.90"
+                                android:visibility="invisible" />
+
+                            <Button
+                                android:id="@+id/Clear"
+                                style="?android:attr/buttonStyleInset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.05"
+                                android:paddingRight="10dp"
+                                android:text="@string/Clear" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp" >
+
+                        <TextView
+                            android:id="@+id/search_result_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="left"
+                            android:layout_weight="0.5"
+                            android:text="@string/Search_Result" />
+
+                        <TextView
+                            android:id="@+id/totalTagCount_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="left"
+                            android:layout_weight="0.5"
+                            android:text="" />
+                    </LinearLayout>
+
+                  <include layout="@layout/tag_result_view" />
+                  
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/firmware"
+    android:layout_width="fill_parent"
+    android:layout_height="45dip" >
+
+    <TextView
+        android:id="@+id/child1"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:text="Firmware"
+        android:textColor="#ffCCCC22"
+        android:textSize="17dip"
+        android:textStyle="bold" >
+    </TextView>
+
+</LinearLayout>
