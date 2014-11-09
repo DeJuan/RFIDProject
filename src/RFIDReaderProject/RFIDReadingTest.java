@@ -7,9 +7,16 @@ import com.thingmagic.TagReadData;
 public class RFIDReadingTest {
 	Reader reader; 
 	public RFIDReadingTest(String protocol) throws ReaderException{
-		if (protocol == "auto"){
+		if (protocol == "DeJuan"){
 			this.reader = Reader.create("tmr:///com4");
 			this.reader.connect();
+		}
+		if (protocol == "Cynthia"){
+			this.reader = Reader.create("tmr:///com3");
+			this.reader.connect();
+		}
+		if (protocol == "Cathleen"){
+			throw new UnsupportedOperationException();
 		}
 		else{
 			this.reader = Reader.create(protocol);
@@ -18,13 +25,13 @@ public class RFIDReadingTest {
 	}
 	
 	public TagReadData[] readTags() throws ReaderException{
-		TagReadData[] readTags = reader.read(100);
+		TagReadData[] readTags = reader.read(2000);
 		return readTags;
 	}
 	
 	public static void main(String args[]){
 		try {
-			RFIDReadingTest reader = new RFIDReadingTest("auto");
+			RFIDReadingTest reader = new RFIDReadingTest("DeJuan");
 			TagReadData[] readings = reader.readTags();
 			for (int i = 0; i < readings.length; i++){
 				System.err.printf("Tag %s was read: "
