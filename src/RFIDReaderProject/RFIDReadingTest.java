@@ -11,11 +11,11 @@ public class RFIDReadingTest {
 			this.reader = Reader.create("tmr:///com4");
 			this.reader.connect();
 		}
-		if (protocol == "Cynthia"){
+		else if (protocol == "Cynthia"){
 			this.reader = Reader.create("tmr:///com3");
 			this.reader.connect();
 		}
-		if (protocol == "Cathleen"){
+		else if (protocol == "Cathleen"){
 			throw new UnsupportedOperationException();
 		}
 		else{
