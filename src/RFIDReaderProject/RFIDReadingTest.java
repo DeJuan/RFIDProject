@@ -8,10 +8,12 @@ public class RFIDReadingTest {
 	Reader reader; 
 	public RFIDReadingTest(String protocol) throws ReaderException{
 		if (protocol == "auto"){
-			this.reader = Reader.create("tmr:///com2");
+			this.reader = Reader.create("tmr:///com4");
+			this.reader.connect();
 		}
 		else{
 			this.reader = Reader.create(protocol);
+			this.reader.connect();
 		}
 	}
 	
@@ -28,6 +30,9 @@ public class RFIDReadingTest {
 				System.err.printf("Tag %s was read: "
 						+ "This tag is number %d in the order of detected tags"
 						+ System.getProperty("line.separator"), readings[i].toString(), i);
+			}
+			if (readings.length == 0){
+				System.err.println("No tags were detected.");
 			}
 		} catch (ReaderException e) {
 			// TODO Auto-generated catch block
