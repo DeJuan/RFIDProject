@@ -10,10 +10,12 @@ public class RFIDReadingTest {
 		if (protocol == "DeJuan"){
 			this.reader = Reader.create("tmr:///com4");
 			this.reader.connect();
+			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
 		}
 		else if (protocol == "Cynthia"){
 			this.reader = Reader.create("tmr:///com3");
 			this.reader.connect();
+			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
 		}
 		else if (protocol == "Cathleen"){
 			throw new UnsupportedOperationException();
