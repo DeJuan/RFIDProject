@@ -1,7 +1,10 @@
 package RFIDReaderProject;
 
+import com.thingmagic.ReadPlan;
 import com.thingmagic.Reader;
 import com.thingmagic.ReaderException;
+import com.thingmagic.SimpleReadPlan;
+import com.thingmagic.TagProtocol;
 import com.thingmagic.TagReadData;
 
 public class RFIDReadingTest {
@@ -11,14 +14,25 @@ public class RFIDReadingTest {
 			this.reader = Reader.create("tmr:///com4");
 			this.reader.connect();
 			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
+			int[] antennasToUse = {1};
+			ReadPlan antennaSettings = new SimpleReadPlan(antennasToUse, TagProtocol.GEN2);
+			this.reader.paramSet("/reader/read/plan", antennaSettings);
 		}
 		else if (protocol == "Cynthia"){
 			this.reader = Reader.create("tmr:///com3");
 			this.reader.connect();
 			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
+			int[] antennasToUse = {1};
+			ReadPlan antennaSettings = new SimpleReadPlan(antennasToUse, TagProtocol.GEN2);
+			this.reader.paramSet("/reader/read/plan", antennaSettings);
 		}
 		else if (protocol == "Cathleen"){
-			throw new UnsupportedOperationException();
+			this.reader = Reader.create("eapi:///dev/ttyUSB0");
+			this.reader.connect();
+			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
+			int[] antennasToUse = {1};
+			ReadPlan antennaSettings = new SimpleReadPlan(antennasToUse, TagProtocol.GEN2);
+			this.reader.paramSet("/reader/read/plan", antennaSettings);
 		}
 		else{
 			this.reader = Reader.create(protocol);
