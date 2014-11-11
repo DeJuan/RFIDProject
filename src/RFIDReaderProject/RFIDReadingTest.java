@@ -49,16 +49,22 @@ public class RFIDReadingTest {
 		try {
 			RFIDReadingTest reader = new RFIDReadingTest("DeJuan");
 			TagReadData[] readings = reader.readTags();
-			for (int i = 0; i < readings.length; i++){
-				System.err.printf("Tag %s was read: "
-						+ "This tag is number %d in the order of detected tags."
-						+ System.getProperty("line.separator") 
-						+ "The above tag has frequency %d and phase %d, with Received Signal Strength Indication(RSSI) of %d. The higher the RSSI, the stronger the received signal."
-						+ System.getProperty("Line.separator"), readings[i].toString(), i, readings[i].getFrequency(), readings[i].getPhase(), readings[i].getRssi());
-			}
 			if (readings.length == 0){
 				System.err.println("No tags were detected.");
 			}
+			else{
+				System.err.println("Note: The higher the RSSI, the stronger the received signal is. Watch for negatives!");
+				System.err.println("");
+				for (int i = 0; i < readings.length; i++){
+					System.err.printf("Tag %s was read: "
+							+ "This tag is number %d in the order of detected tags."
+							+ System.getProperty("line.separator") 
+							+ "The above tag has frequency %d and phase %d, with Received Signal Strength Indication(RSSI) of %d."
+							+ System.getProperty("line.separator")
+							+ System.getProperty("line.separator"), readings[i].toString(), i, readings[i].getFrequency(), readings[i].getPhase(), readings[i].getRssi());
+				}
+			}
+
 		} catch (ReaderException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
