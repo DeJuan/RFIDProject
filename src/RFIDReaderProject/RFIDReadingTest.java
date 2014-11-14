@@ -19,37 +19,24 @@ public class RFIDReadingTest {
 	public RFIDReadingTest(String protocol) throws ReaderException{
 		if (protocol == "DeJuan"){
 			this.reader = Reader.create("tmr:///com4");
-			this.reader.connect();
-			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
-			int hop[]={915000};
-			this.reader.paramSet("/reader/region/hopTable", hop);
-			int[] antennasToUse = {1,4};
-			ReadPlan antennaSettings = new SimpleReadPlan(antennasToUse, TagProtocol.GEN2);
-			this.reader.paramSet("/reader/read/plan", antennaSettings);
 		}
 		else if (protocol == "Cynthia"){
 			this.reader = Reader.create("tmr:///com3");
-			this.reader.connect();
-			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
-			int hop[]={915000};
-			this.reader.paramSet("/reader/region/hopTable", hop);
-			int[] antennasToUse = {1,4};
-			ReadPlan antennaSettings = new SimpleReadPlan(antennasToUse, TagProtocol.GEN2);
-			this.reader.paramSet("/reader/read/plan", antennaSettings);
 		}
 		else if (protocol == "Linux"){
 			//May be broken because of permissions
 			this.reader = Reader.create("eapi:///dev/ttyUSB0");
-			this.reader.connect();
-			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
-			int[] antennasToUse = {1,4};
-			ReadPlan antennaSettings = new SimpleReadPlan(antennasToUse, TagProtocol.GEN2);
-			this.reader.paramSet("/reader/read/plan", antennaSettings);
 		}
 		else{
 			this.reader = Reader.create(protocol);
-			this.reader.connect();
 		}
+		this.reader.connect();
+		this.reader.paramSet("/reader/region/id", Reader.Region.NA);
+		int hop[]={915000};
+		this.reader.paramSet("/reader/region/hopTable", hop);
+		int[] antennasToUse = {1,4};
+		ReadPlan antennaSettings = new SimpleReadPlan(antennasToUse, TagProtocol.GEN2);
+		this.reader.paramSet("/reader/read/plan", antennaSettings);
 	}
 	
 	public TagReadData[] readTags() throws ReaderException{
@@ -106,6 +93,7 @@ public class RFIDReadingTest {
 						continue;
 					}
 					System.err.printf("For the tag %s, the phase difference detected between the two antenna readings is %f", tag, radianStorage.get(tag));
+					System.err.println("");
 				}
 			}
 
