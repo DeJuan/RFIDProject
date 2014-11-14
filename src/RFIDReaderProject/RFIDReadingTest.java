@@ -14,6 +14,8 @@ public class RFIDReadingTest {
 			this.reader = Reader.create("tmr:///com4");
 			this.reader.connect();
 			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
+			int hop[]={915000};
+			this.reader.paramSet("/reader/region/hopTable", hop);
 			int[] antennasToUse = {1,4};
 			ReadPlan antennaSettings = new SimpleReadPlan(antennasToUse, TagProtocol.GEN2);
 			this.reader.paramSet("/reader/read/plan", antennaSettings);
@@ -22,11 +24,14 @@ public class RFIDReadingTest {
 			this.reader = Reader.create("tmr:///com3");
 			this.reader.connect();
 			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
+			int hop[]={915000};
+			this.reader.paramSet("/reader/region/hopTable", hop);
 			int[] antennasToUse = {1,4};
 			ReadPlan antennaSettings = new SimpleReadPlan(antennasToUse, TagProtocol.GEN2);
 			this.reader.paramSet("/reader/read/plan", antennaSettings);
 		}
-		else if (protocol == "Cathleen"){
+		else if (protocol == "Linux"){
+			//May be broken because of permissions
 			this.reader = Reader.create("eapi:///dev/ttyUSB0");
 			this.reader.connect();
 			this.reader.paramSet("/reader/region/id", Reader.Region.NA);
