@@ -16,6 +16,10 @@ import com.thingmagic.TagReadData;
 
 public class RFIDContinuousReading{
 	Reader reader; 
+	static List<TagReadData> antennaOneData = new ArrayList<TagReadData>();
+	static List<TagReadData> antennaThreeData = new ArrayList<TagReadData>();
+	static List<TagReadData> antennaFourData = new ArrayList<TagReadData>();
+	
 	public RFIDContinuousReading(String protocol) throws ReaderException{
 		if (protocol == "DeJuan"){
 			this.reader = Reader.create("tmr:///com4");
@@ -44,6 +48,20 @@ public class RFIDContinuousReading{
 		return readTags;
 	}
 	
+	public List<TagReadData> extractGivenTag(TagReadData tag){
+		List<TagReadData> reads = new ArrayList<TagReadData>();
+		if(antennaOneData.contains(tag)){
+			reads.add(antennaOneData.get(antennaOneData.indexOf(tag)));
+		}
+		if(antennaThreeData.contains(tag)){
+			reads.add(antennaThreeData.get(antennaThreeData.indexOf(tag)));
+		}
+		if(antennaFourData.contains(tag)){
+			reads.add(antennaFourData.get(antennaFourData.indexOf(tag)));
+		}
+		return reads;
+	}
+	
 	public static void main(String args[]) throws InterruptedException{
 		try {
 			RFIDReadingTest reader = new RFIDReadingTest("Cynthia");
@@ -59,19 +77,43 @@ public class RFIDContinuousReading{
 			reader.reader.stopReading();
 			Map<String, List<TagReadData>> allReadData = srl.returnDataCollected();
 			reader.reader.removeReadListener(srl);
-			TagReadData[] readings = reader.readTags();
+			for(String key : allReadData.keySet()){
+				for(TagReadData tag : allReadData.get(key)){
+					switch(tag.getAntenna()){
+					case 1:
+						antennaOneData.add(tag);
+						break;
+					case 3:
+						antennaThreeData.add(tag);
+						break;
+					case 4:
+						antennaFourData.add(tag);
+						break;
+					default:
+						break;
+					}
+				}
+			}
+			//At this point you should have all the readings for a given antenna in its respective list.
+			//If you want the TagReadData from the three different antennas for a given TagReadData object, then I've written
+			//a helper for you too: 
+			//extractGivenTag(TagReadData tagYouWantDataFor). 
 			Map<String, Double> radianStorage = new HashMap<String, Double>();
 			Map<String, Double> timeStorage = new HashMap<String, Double>();
-			if (readings.length == 0){
+			List<TagReadData> readings = new ArrayList<TagReadData>();
+			readings.addAll(antennaOneData);
+			readings.addAll(antennaThreeData);
+			readings.addAll(antennaFourData);
+			if (readings.size() == 0){
 				System.err.println("No tags were detected.");
 			}
 			else{
 				//Current implementation works for exactly two readings, not more; you need to do averaging/other work in that case.
 				List<String> doubleDetectedTags = new ArrayList<String>();
-				for (int i = 0; i < readings.length; i++){
-					String currentTag = readings[i].epcString();
-					double timeStamp = readings[i].getTime();
-					double radians = readings[i].getPhase()*Math.PI;
+				for (TagReadData currentReading : readings){
+					String currentTag = currentReading.epcString();
+					double timeStamp = currentReading.getTime();
+					double radians = currentReading.getPhase()*Math.PI;
 					radians = radians/180.0;
 					if(!radianStorage.containsKey(currentTag)){
 						radianStorage.put(currentTag, radians);
@@ -94,18 +136,17 @@ public class RFIDContinuousReading{
 				}
 				System.err.println("Note: The higher the RSSI, the stronger the received signal is. Watch for negatives!");
 				System.err.println("");
-				for (int i = 0; i < readings.length; i++){
-					double radians = readings[i].getPhase()*Math.PI;
+				for (TagReadData currentReading : readings){
+					double radians = currentReading.getPhase()*Math.PI;
 					radians = radians/180.0;
 					System.err.printf("Tag %s was read: "
-							+ "This tag is number %d in the order of detected tags."
 							+ System.getProperty("line.separator") 
 							+ "The above tag has frequency %d and phase %d, with Received Signal Strength Indication(RSSI) of %d."
 							+ System.getProperty("line.separator")
 							+ "In radians, the phase is %f."
 							+ System.getProperty("line.separator")
-							+ System.getProperty("line.separator"), readings[i].toString(), i, readings[i].getFrequency(), 
-							readings[i].getPhase(), readings[i].getRssi(), radians);
+							+ System.getProperty("line.separator"), currentReading.toString(), currentReading.getFrequency(), 
+							currentReading.getPhase(), currentReading.getRssi(), radians);
 					
 				}
 				for(String tag : radianStorage.keySet()){
